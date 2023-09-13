@@ -1,19 +1,39 @@
-import React from "react";
-import { View, Text, SafeAreaView } from "react-native";
-import Menu from "./Menu";
+import React, { useState } from "react";
+import { View, Text, Button } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { ImageBackground } from "react-native";
+import { TouchableOpacity } from "react-native";
 
-const Homescreen = () => {
+function HomeScreen() {
+  const [lang, chLang] = useState("en");
+  const navigation = useNavigation();
+  const main = require("../src/images/main-1.jpg");
+
   return (
-    <SafeAreaView className="flex-1">
-      <View className="h-16 bg-blue-500 flex-row justify-between items-center">
-        <Text className="text-white text-lg font-bold ml-4">My App</Text>
+    <ImageBackground className="bg-cover h-full w-full" source={main}>
+      <TouchableOpacity
+        className="bg-[#21252980] p-2 my-1 rounded items-center justify-center absolute top-6 left-6"
+        onPress={() => {
+          lang === "en" ? chLang("ru") : chLang("en");
+        }}
+      >
+        <Text className="text-[#fcf6bd] text-xl font-bold">
+          {lang === "en" ? "language: en" : "язык: рус"}
+        </Text>
+      </TouchableOpacity>
+      <View className="flex items-center mt-40">
+        <TouchableOpacity
+          className="bg-[#21252980] p-2 my-1 rounded items-center"
+          onPress={() => navigation.navigate("Intro", { lang: lang })}
+        >
+          <Text className="text-[#fcf6bd] text-xl font-bold">
+            {lang === "en" ? "Play" : "Играть"}
+          </Text>
+        </TouchableOpacity>
+        {/* <Button title="About" onPress={() => navigation.navigate("About")} /> */}
       </View>
-      <Menu />
-      <View className="flex-1 bg-white p-4">
-        <Text>Welcome to the Home Screen!</Text>
-      </View>
-    </SafeAreaView>
+    </ImageBackground>
   );
-};
+}
 
-export default Homescreen;
+export default HomeScreen;

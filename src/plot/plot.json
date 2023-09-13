@@ -1,0 +1,489 @@
+{
+  "info": "This is a 'visual novel' type of game. The player is asked to choose different story options, search for items and make decisions that determine the plot and ending of the game. The photos used here were taken by the author of the project in 2016-2018 in the Kyiv metro. Events are based on real stories. Enjoy the game!",
+  "intro": "   Since childhood you have been lured by the darkness of metro tunnels. Riding underground you have often noticed various branches in the tunnels. Spending hours in front of the computer you found a lot of information about the capital's underground and decided to move to the active phase of research - to climb inside these tunnels!",
+  "p0": {
+    "p": "You need to decide how to get into the tunnels. There are two main ways: through the ventilation shaft or through the \"portal\" (from the station).",
+    "b1": "Try it through the ventilation",
+    "b2": "Try it from the station",
+    "b3": "",
+    "f1": "p1",
+    "f2": "p2",
+    "f3": "",
+    "bg": "0"
+  },
+  "p1": {
+    "p": "You decided to climb through a ventilation shaft located in a secluded courtyard between panel houses. However, you find out that the door is locked! Choose your variant. Hint: tap the grid to sneak in or the door to break in.",
+    "bg": "1",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "p11",
+    "f2": "p12",
+    "f3": "",
+
+    "hb1": {
+      "width": "60px",
+      "height": "114px",
+      "top": "366px",
+      "left": "357px",
+      "hf1": "p11"
+    },
+    "hb2": {
+      "width": "313px",
+      "height": "124px",
+      "top": "214px",
+      "left": "257px",
+      "hf2": "p12"
+    }
+  },
+  "p11": {
+    "p": "You broke the lock on the door with and went inside. There was a gaping chasm of several tens of meters beneath your feet. Also you noticed a small white box with a flashing red LED next to the door....",
+    "b1": "Start the descent",
+    "b2": "Wait 30 minutes near the ventilation shaft for the sake of caution",
+    "b3": "",
+    "f1": "p111",
+    "f2": "p112",
+    "f3": "",
+    "bg": "11"
+  },
+  "p111": {
+    "p": "You neglected caution and started down the vertical shaft to the bottom. After 10 minutes, the glare of torches appeared from above - it looked like the police!",
+    "b1": "Go back upstairs",
+    "b2": "Speed up and try to escape",
+    "b3": "",
+    "f1": "p1111",
+    "f2": "p1112",
+    "f3": "",
+    "bg": "111"
+  },
+  "p1111": {
+    "p": "You went upstairs. The police caught you, handcuffed you and took you to the police station. There you found out that the alarm had been triggered when you broke in! After 24 hours of questioning you were given a big fine for breaking in and released. Your career as an Urban Explorer was over before it could begin.",
+    "b1": "Try again!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p112": {
+    "p": "You were stressed by the flashing red light as it was very much like an alarm. You decided to wait to see what happens. Ten minutes later, a police car with flashing lights came into the yard. You hid behind the rubbish bins, waited for a moment and carefully left the yard. The evening ended badly, but not at the police station!",
+    "b1": "Try again!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "112"
+  },
+  "p1112": {
+    "p": "You flashed down the remaining steps into the approach tunnel to the tracks bypassing the huge doors.",
+    "b1": "Next",
+    "b2": "",
+    "b3": "",
+    "f1": "p1113",
+    "f2": "",
+    "f3": "",
+    "bg": "1112"
+  },
+  "p1113": {
+    "p": "Bypassing the fans you went out into the lane. You could already hear shouting from the side of the ventilation tunnel. What's your move?",
+    "b1": "Run along the tracks towards the station, the lights of which could be seen in the distance.",
+    "b2": "Run in the opposite direction from the station",
+    "b3": "",
+    "f1": "p11131",
+    "f2": "p1113213",
+    "f3": "",
+    "bg": "1113"
+  },
+  "p11131": {
+    "p": "You ran up to the station. There were quite a lot of people on the platform and some metro workers in orange waistcoats.",
+    "b1": "Try to climb out onto the platform",
+    "b2": "Enter the service tunnel",
+    "b3": "Hide behind the wicket and wait for the train to arrive at the station",
+    "f1": "p111311",
+    "f2": "p11132",
+    "f3": "p11133",
+    "bg": "11131"
+  },
+  "p111311": {
+    "p": "To the surprised looks of the passengers, you climbed out into the station. The workers immediately spotted you, rounded you up and handed you over to the police. You were sentenced to 15 days in jail for hooliganism!",
+    "b1": "Try again!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p11133": {
+    "p": "You waited for a train to pull into the station and when the crowding started you carefully opened the gate from the inside, entered the train and successfully escaped. ",
+    "b1": "Try again!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "11133"
+  },
+  "p11132": {
+    "p": "You climbed into the maintenance room and out onto the balcony above the tracks. You had a magnificent view of the passing trains.....",
+    "b1": "Next",
+    "b2": "",
+    "b3": "",
+    "f1": "p111321",
+    "f2": "",
+    "f3": "",
+    "bg": "11132"
+  },
+  "p111321": {
+    "p": "After watching the trains passing by, you went back down to the tracks. It seemed to you that there were many police officers at the station - they were informed about the recent break-in in the tunnels.",
+    "b1": "Try to sneak out to the station",
+    "b2": "Run to the next station in the passing direction of train traffic",
+    "b3": "Run to the next station on the oncoming train track",
+    "f1": "p111311",
+    "f2": "p1113212",
+    "f3": "p1113213",
+    "bg": "111321"
+  },
+  "p1113212": {
+    "p": "You went on. (to be continued)",
+    "b1": "Try again!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1113212"
+  },
+  "p1113213": {
+    "p": "You ran in the oncoming direction of traffic. After a couple of minutes of running, you saw the headlights of an approaching train....",
+    "b1": "Shine a flashlight on the driver so he can see you and stop the train",
+    "b2": "Try to hook onto the wires on the tunnel wall",
+    "b3": "Run away from the train",
+    "f1": "p11132131",
+    "f2": "p11132132",
+    "f3": "p11132133",
+    "bg": "1113213"
+  },
+  "p11132133": {
+    "p": "Strangely enough, the train turns out to be faster than a running man, but from the frantic adrenaline rush you turned on to the damn Usain Bolt and somehow miraculously managed to run and hide in the hole in the wall of the tunnel.",
+    "b1": "Explore this strange passageway",
+    "b2": "Run back to the station",
+    "b3": "",
+    "f1": "p111321331",
+    "f2": "p111321332",
+    "f3": "",
+    "bg": "11132133"
+  },
+  "p111321332": {
+    "p": "As the train driver reported intruders in the tunnel at the station you were already met by police and national guard. You were given a full-body massage and then taken to the police station and put in jail for 15 days.",
+    "b1": "Try again!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p11132131": {
+    "p": "You shined your flashlight in the direction of the train. The driver applied emergency braking and managed to stop the train in time. You were taken to the station and handed over to the police. You were given a huge fine for stopping the train!",
+    "b1": "Try again!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p11132132": {
+    "p": "You didn't calculate the fact that the train has huge side mirrors, which knocked you off the cables and scattered you across the track.",
+    "b1": "Respawn?",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "11132132"
+  },
+  "p111321331": {
+    "p": "You have found an entrance to the half-abandoned bunker! Unfortunately there was too much water...",
+    "b1": "Try to swim",
+    "b2": "Try to look for other variants",
+    "b3": "",
+    "f1": "pb2",
+    "f2": "pb1",
+    "f3": "",
+    "bg": "111321331"
+  },
+  "p12": {
+    "p": "You managed to bend the grate and crawl through the subway tunnel, but you spent a lot of time enlarging the hole and getting in. There was a gaping chasm of several tens of meters beneath your feet. ",
+    "b1": "Start the descent!",
+    "b2": "",
+    "b3": "",
+    "f1": "p121",
+    "f2": "",
+    "f3": "",
+    "bg": "11"
+  },
+  "p121": {
+    "p": "You walked leisurely down the tunnel and examined the huge metal sealed doors and vents. You decided not to risk going on the tracks while the subway is running, but to wait until it closes.",
+    "b1": "Next",
+    "b2": "",
+    "b3": "",
+    "f1": "p1211",
+    "f2": "",
+    "f3": "",
+    "bg": "1112"
+  },
+  "p1211": {
+    "p": "You entered the tunnel late at night. It had working lights and no trains were running. ",
+    "b1": "Walk to the right towards the old deep tunnels",
+    "b2": "Go left toward the new square tunnels",
+    "b3": "",
+    "f1": "p121111",
+    "f2": "p12112",
+    "f3": "",
+    "bg": "1211"
+  },
+  "p12111": {
+    "p": "On your way you noticed an unsightly passage perpendicular to the main tunnel....",
+    "b1": "Explore it",
+    "b2": "Skip it and continue walking",
+    "b3": "",
+    "f1": "p111321331",
+    "f2": "p121111",
+    "f3": "",
+    "bg": "12111"
+  },
+  "p121111": {
+    "p": "You have met a standing train in your path! \n(to be continued)",
+    "b1": "To the beginning",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "121111"
+  },
+  "p12112": {
+    "p": "You decided to go in the direction of the new square tunnels. When you were passing the station, a cleaning lady saw you from far away and shouted something to you. ",
+    "b1": "Walk up to her and pretend to be a worker",
+    "b2": "Start running",
+    "b3": "Pretend you didn't hear the call and move on",
+    "f1": "p121121",
+    "f2": "p121122",
+    "f3": "p121123",
+    "bg": "12112"
+  },
+  "p121121": {
+    "p": "The disguise failed because you didn't have a vest or ID. The woman called the police, you were rounded up and taken to the station. Since you did not break anything and did not disrupt train traffic, you were soon released.",
+    "b1": "Try again",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p121122": {
+    "p": "You successfully escaped, but at the next station, the police were already waiting for you. You were rounded up and taken to the station. Since you did not break anything and did not disrupt train traffic, you were soon released.",
+    "b1": "Try again",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p121123": {
+    "p": "You were lucky and the employee did not raise the alarm. You have successfully reached the connection of round tunnels with square ones.\n(to be continued)",
+    "b1": "To the beginning",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "121123"
+  },
+  "p2": {
+    "p": "You decided to go throw the portal. (to be continued / try another variant)",
+    "b1": "To the beginning",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "2"
+  },
+  "pb1": {
+    "p": "You found a small room that turned out to be a pumping station. You need to find a way to turn them on.",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11",
+    "f2": "",
+    "f3": "",
+    "bg": "b1",
+    "hb1": {
+      "width": "26px",
+      "height": "43px",
+      "top": "273px",
+      "left": "600px",
+      "hf1": "pb11"
+    }
+  },
+  "pb11": {
+    "p": "The pumps were running loud. Someone could hear the sound, so you hurried on. Find a way to get inside.",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "",
+    "f2": "",
+    "f3": "",
+    "bg": "b11",
+    "hb1": {
+      "width": "114px",
+      "height": "173px",
+      "top": "321px",
+      "left": "129px",
+      "hf1": "pb114"
+    },
+    "hb2": {
+      "width": "170px",
+      "height": "198px",
+      "top": "197px",
+      "left": "246px",
+      "hf2": "pb113"
+    },
+    "hb3": {
+      "width": "89px",
+      "height": "209px",
+      "top": "298px",
+      "left": "706px",
+      "hf3": "pb115"
+    }
+  },
+  "pb113": {
+    "p": "You remembered what you were taught in the Half-Life game and climbed through the ventilation, after which you ended up in the filter-ventilation room. (to be continued)",
+    "b1": "Continue",
+    "b2": "",
+    "b3": "",
+    "f1": "pb1131",
+    "f2": "",
+    "f3": "",
+    "bg": "b113"
+  },
+  "pb114": {
+    "p": "You entered the filters room. There was an alarm on the door! Where to go?",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "",
+    "f2": "",
+    "f3": "",
+    "bg": "b114",
+    "hb1": {
+      "width": "70px",
+      "height": "90px",
+      "top": "283px",
+      "left": "488px",
+      "hf1": "pb1141"
+    },
+    "hb2": {
+      "width": "154px",
+      "height": "203px",
+      "top": "283px",
+      "left": "10px",
+      "hf2": "pb1142"
+    },
+    "hb3": {
+      "width": "106px",
+      "height": "348px",
+      "top": "163px",
+      "left": "207px",
+      "hf3": "pb1143"
+    }
+  },
+  "pb115": {
+    "p": "You decided to turn back. Unfortunately, the noise from the operation of the pumps was heard by the workers, who immediately packed you up and handed over to the police. ",
+    "b1": "Try again!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "b1111"
+  },
+  "pb1143": {
+    "p": "You decided to hide behind the barrels. It was good idea cos in 10 minutes guardians came and checked the object. You waited for them to leave and...",
+    "b1": "Continue",
+    "b2": "",
+    "b3": "",
+    "f1": "pb1131",
+    "f2": "",
+    "f3": "",
+    "bg": "b1143"
+  },
+  "pb1141": {
+    "p": "You decided to continue exploration. Unfortunately, after a while security came and caught you.",
+    "b1": "Try again!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "pb1142": {
+    "p": "Without thinking twice, you jumped into a dark passage. Footsteps were already heard behind. The passage led you out of the bunker to the rails. Unfortunately, it was not possible to inspect the bunker completely this time.",
+    "b1": "Continue",
+    "b2": "",
+    "b3": "",
+    "f1": "p1211",
+    "f2": "",
+    "f3": "",
+    "bg": "b1142"
+  },
+  "pb1131": {
+    "p": "You entered the main block of the bunker.",
+    "b1": "Continue",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11311",
+    "f2": "",
+    "f3": "",
+    "bg": "b1131"
+  },
+  "pb11311": {
+    "p": "You started walking through the labyrinths of tunnels...",
+    "b1": "Continue",
+    "b2": "",
+    "b3": "",
+    "f1": "pb113111",
+    "f2": "",
+    "f3": "",
+    "bg": "b11311"
+  },
+  "pb113111": {
+    "p": "You came to the (to be continued)",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "pb113111",
+    "f2": "",
+    "f3": "",
+    "bg": "b113111"
+  },
+  "pb2": {
+    "p": "You froze to death cos water underground is too cold.",
+    "b1": "Try again!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "11132132",
+    "ach": "Sailor"
+  }
+}

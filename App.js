@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "./screens/HomeScreen";
+import Homescreen from "./screens/Homescreen";
 import Game from "./screens/Game";
 import Intro from "./screens/Intro";
 
@@ -13,7 +13,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Home"
-          component={HomeScreen}
+          component={Homescreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

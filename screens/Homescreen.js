@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import { TouchableOpacity } from "react-native";
 
-function HomeScreen() {
+function Homescreen() {
   const [lang, chLang] = useState("en");
   const navigation = useNavigation();
   const main = require("../src/images/main-1.jpg");
@@ -36,4 +36,4 @@ function HomeScreen() {
   );
 }
 
-export default HomeScreen;
+export default Homescreen;

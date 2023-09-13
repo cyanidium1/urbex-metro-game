@@ -1,8 +1,16 @@
 {
   "expo": {
-    "name": "urbex-metro-game",
+    "name": "Urbex Metro",
     "slug": "urbex-metro-game",
     "version": "1.0.0",
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "extra": {
+      "eas": {
+        "projectId": "bb503278-1369-4d01-831f-012ff19a8254"
+      }
+    },
+    "android": {
+      "package": "com.cyanidium.urbexmetrogame"
+    }
   }
 }

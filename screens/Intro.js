@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, ImageBackground, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  ImageBackground,
+  StyleSheet,
+  SafeAreaView,
+} from "react-native";
 import ploten from "../src/plot/plot.json";
 import plotru from "../src/plot/plotru.json";
 import { useNavigation, useRoute } from "@react-navigation/core";
@@ -43,14 +49,14 @@ const Intro = () => {
   }, [currentIndex, text]);
 
   return (
-    <View className="flex-1">
+    <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground className="flex-1 cover" source={backgroundImage}>
-        <View className="absolute bottom-10 p-1">
+        <View className="absolute bottom-10 p-1 w-full">
           <Text className="text-white font-bold text-xl bg-[#30303080]">
             {displayText}
           </Text>
         </View>
-        <View className="absolute top-8 left-2">
+        <View className="absolute top-2 left-2">
           <TouchableOpacity
             className="bg-[#2a2a2a80] p-1 my-1 rounded items-center justify-center"
             onPress={() => navigation.navigate("Home")}
@@ -71,7 +77,7 @@ const Intro = () => {
           </TouchableOpacity>
         </View>
       </ImageBackground>
-    </View>
+    </SafeAreaView>
   );
 };
 

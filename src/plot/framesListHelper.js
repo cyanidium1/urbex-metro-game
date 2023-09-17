@@ -6,7 +6,7 @@ const arrayOfKeys = [];
 
 for (const key in jsonData) {
   // p for all. pb for pb :/
-  if (/^pb\d+$/.test(key)) {
+  if (/^p\d+$/.test(key)) {
     arrayOfKeys.push(key);
   }
 }

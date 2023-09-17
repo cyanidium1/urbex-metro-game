@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Button, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import { TouchableOpacity } from "react-native";

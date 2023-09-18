@@ -13,7 +13,7 @@ import { TouchableOpacity } from "react-native";
 
 const Intro = () => {
   const {
-    params: { lang },
+    params: { lang, plotBtn },
   } = useRoute();
   let plot;
   switch (lang) {
@@ -69,7 +69,9 @@ const Intro = () => {
         <View className="absolute bottom-0 right-4">
           <TouchableOpacity
             className="bg-[#2d2d2d80] p-1 my-1 rounded items-center justify-center"
-            onPress={() => navigation.navigate("Game", { lang: lang })}
+            onPress={() =>
+              navigation.navigate("Game", { lang: lang, plotBtn: plotBtn })
+            }
           >
             <Text className="text-[#fcf6bd] text-base font-bold">
               {lang === "en" ? "Next" : "Далее"}

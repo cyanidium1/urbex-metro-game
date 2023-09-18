@@ -84,7 +84,15 @@
     "f1": "p1113",
     "f2": "",
     "f3": "",
-    "bg": "1112"
+    "bg": "1112",
+    "get": {
+      "name": "Umbreon",
+      "bg": "8",
+      "width": 65,
+      "height": 55,
+      "top": 180,
+      "left": 560
+    }
   },
   "p1113": {
     "p": "Bypassing the fans you went out into the lane. You could already hear shouting from the side of the ventilation tunnel. What's your move?",
@@ -104,7 +112,15 @@
     "f1": "p111311",
     "f2": "p11132",
     "f3": "p11133",
-    "bg": "11131"
+    "bg": "11131",
+    "get": {
+      "name": "Meowth",
+      "bg": "7",
+      "width": 45,
+      "height": 55,
+      "top": 100,
+      "left": 645
+    }
   },
   "p111311": {
     "p": "To the surprised looks of the passengers, you climbed out into the station. The workers immediately spotted you, rounded you up and handed you over to the police. You were sentenced to 15 days in jail for hooliganism!",
@@ -134,15 +150,23 @@
     "f1": "p111321",
     "f2": "",
     "f3": "",
-    "bg": "11132"
+    "bg": "11132",
+    "get": {
+      "name": "Meowth",
+      "bg": "12",
+      "width": 35,
+      "height": 35,
+      "top": 260,
+      "left": 220
+    }
   },
   "p111321": {
     "p": "After watching the trains passing by, you went back down to the tracks. It seemed to you that there were many police officers at the station - they were informed about the recent break-in in the tunnels.",
     "b1": "Try to sneak out to the station",
-    "b2": "Run to the next station in the passing direction of train traffic",
+    "b2": "",
     "b3": "Run to the next station on the oncoming train track",
     "f1": "p111311",
-    "f2": "p1113212",
+    "f2": "",
     "f3": "p1113213",
     "bg": "111321"
   },
@@ -207,14 +231,22 @@
     "bg": "11132132"
   },
   "p111321331": {
-    "p": "You have found an entrance to the half-abandoned bunker! Unfortunately there was too much water...",
+    "p": "You have found an entrance to the bunker! Unfortunately there was too much water to enter...",
     "b1": "Try to swim",
     "b2": "Try to look for other variants",
     "b3": "",
     "f1": "pb2",
     "f2": "pb1",
     "f3": "",
-    "bg": "111321331"
+    "bg": "111321331",
+    "get": {
+      "name": "Vaporeon",
+      "bg": "13",
+      "width": 30,
+      "height": 25,
+      "top": 210,
+      "left": 420
+    }
   },
   "p12": {
     "p": "You managed to bend the grate and crawl through the subway tunnel, but you spent a lot of time enlarging the hole and getting in. There was a gaping chasm of several tens of meters beneath your feet. ",
@@ -372,7 +404,15 @@
     "f1": "pb1131",
     "f2": "",
     "f3": "",
-    "bg": "b113"
+    "bg": "b113",
+    "get": {
+      "name": "Caterpie",
+      "bg": "9",
+      "width": 30,
+      "height": 30,
+      "top": 110,
+      "left": 308
+    }
   },
   "pb114": {
     "p": "You entered the filters room. There was an alarm on the door! Where to go?",
@@ -463,17 +503,46 @@
     "f1": "pb113111",
     "f2": "",
     "f3": "",
-    "bg": "b11311"
+    "bg": "b11311",
+    "get": {
+      "name": "Diglett",
+      "bg": "14",
+      "width": 40,
+      "height": 40,
+      "top": 275,
+      "left": 648
+    }
   },
   "pb113111": {
-    "p": "You came to the main block.",
-    "b1": "Down_touch",
-    "b2": "Left_touch",
-    "b3": "Right_touch",
+    "p": "You came to the main block. Where to go?",
+    "b1": "",
+    "b2": "",
+    "b3": "",
     "f1": "pb1131111",
     "f2": "pb1131112",
     "f3": "pb1131113",
-    "bg": "b113111"
+    "bg": "b113111",
+    "hb1": {
+      "width": "320px",
+      "height": "134px",
+      "top": "410px",
+      "left": "280px",
+      "hf1": "pb1131111"
+    },
+    "hb2": {
+      "width": "100px",
+      "height": "100px",
+      "top": "254px",
+      "left": "190px",
+      "hf2": "pb1131112"
+    },
+    "hb3": {
+      "width": "103px",
+      "height": "170px",
+      "top": "244px",
+      "left": "620px",
+      "hf2": "pb1131113"
+    }
   },
   "pb2": {
     "p": "You froze to death cos water underground is too cold.",
@@ -494,12 +563,20 @@
     "f1": "pb11311111",
     "f2": "",
     "f3": "",
-    "bg": "b1131111"
+    "bg": "b1131111",
+    "get": {
+      "name": "Dragonair",
+      "bg": "10",
+      "width": 40,
+      "height": 40,
+      "top": 210,
+      "left": 418
+    }
   },
   "pb11311111": {
     "p": "You continued your path, avoiding obstacles along the way... Choose where to move next.",
-    "b1": "touch_germa",
-    "b2": "touch_next",
+    "b1": "Enter the room",
+    "b2": "Go next",
     "b3": "",
     "f1": "pb113111111",
     "f2": "pb113111112",
@@ -509,12 +586,20 @@
   "pb113111111": {
     "p": "You found yourself in a workers' room with a lot of tools. You might find something useful from here.",
     "b1": "Exit the room",
-    "b2": "found_tool",
+    "b2": "",
     "b3": "",
     "f1": "pb11311111",
-    "f2": "paction",
+    "f2": "",
     "f3": "",
-    "bg": "b113111111"
+    "bg": "b113111111",
+    "get": {
+      "name": "boltcutter",
+      "bg": "boltcutter",
+      "width": 140,
+      "height": 140,
+      "top": 60,
+      "left": 440
+    }
   },
   "pb113111112": {
     "p": "You have found the stairs to the top. Perhaps this path will lead you to the command center?",
@@ -527,8 +612,8 @@
     "bg": "b113111112"
   },
   "pb1131111121": {
-    "p": "You climbed to the 2nd floor. Where to go next?",
-    "b1": "touch_door",
+    "p": "You climbed to the 2nd floor.",
+    "b1": "Next",
     "b2": "",
     "b3": "",
     "f1": "pb11311111211",
@@ -544,12 +629,22 @@
     "f1": "pb113111112111",
     "f2": "pb113111",
     "f3": "",
-    "bg": "b11311111211"
+    "bg": "b11311111211",
+    "get": {
+      "name": "Piplup",
+      "bg": "11",
+      "width": 30,
+      "height": 37,
+      "top": 128,
+      "left": 198
+    }
   },
   "pb1131112": {
-    "p": "You decided to explore the strange passage to the left and found a door. Where to go?",
-    "b1": "touch_door if(tool)",
-    "b2": "touch_back",
+    "p": "You decided to explore the strange passage to the left and found the door with a padlock, probably to command center. What to go?",
+    "b1": "Try to brake it",
+    "b1if": "boltcutter",
+    "b1error": "It seems that it is not possible to brake this door without tools... Maybe you should try to find some!",
+    "b2": "Go back",
     "b3": "",
     "f1": "pb11311121",
     "f2": "pb113111",
@@ -569,11 +664,13 @@
   "pb11311121": {
     "p": "You entered the command center part of the bunker.",
     "b1": "Go see the telephone and telegraph center",
+    "b1if": "phoneDoorOpened",
+    "b1error": "Looks like this door closed from inside and it is not possible to brake it",
     "b2": "Go see the power plant room",
     "b3": "Go back to subway line",
     "f1": "pb113111211",
     "f2": "pb113111212",
-    "f3": "p1211",
+    "f3": "p121111",
     "bg": "b11311121"
   },
   "pb113111212": {
@@ -584,25 +681,41 @@
     "f1": "pb113111211",
     "f2": "pb11311121",
     "f3": "",
-    "bg": "b113111212"
+    "bg": "b113111212",
+    "get": {
+      "name": "Charmander",
+      "bg": "5",
+      "width": 30,
+      "height": 37,
+      "top": 151,
+      "left": 398
+    }
   },
   "pb113111211": {
     "p": "You managed to crawl through the power cables into the room with the communications equipment.",
-    "b1": "Call to president",
+    "b1": "Call to somebody",
     "b2": "Go and see old teletypes",
     "b3": "",
     "f1": "pb1131112111",
     "f2": "pb1131112112",
     "f3": "",
-    "bg": "b113111211"
+    "bg": "b113111211",
+    "get": {
+      "name": "Squirtle",
+      "bg": "3",
+      "width": 30,
+      "height": 27,
+      "top": 291,
+      "left": 338
+    }
   },
   "pb1131112111": {
     "p": "You felt lonely and decided to talk to someone. Who will you call?",
     "b1": "Call to your friend",
     "b2": "Call to president",
     "b3": "Go back",
-    "f1": "padd_call",
-    "f2": "padd_president_call",
+    "f1": "add_friendCall",
+    "f2": "add_presidentCall",
     "f3": "pb113111211",
     "bg": "b1131112111"
   },
@@ -611,8 +724,8 @@
     "b1": "Leave your Instagram for future visitors",
     "b2": "Write a swear word",
     "b3": "Go back to main room",
-    "f1": "padd_insta",
-    "f2": "padd_word",
+    "f1": "add_insta",
+    "f2": "add_world",
     "f3": "pb11311121",
     "bg": "b1131112112"
   },
@@ -631,20 +744,47 @@
     "b1": "Climb up to the surface",
     "b2": "Go to the metro tunnels",
     "b3": "Go back to main room",
-    "f1": "pb113111311",
-    "f2": "p1211",
+    "f1": "p777",
+    "f2": "p121111",
     "f3": "pb113111",
-    "bg": "b11311131"
+    "bg": "b11311131",
+    "get": {
+      "name": "Zubat",
+      "bg": "15",
+      "width": 40,
+      "height": 40,
+      "top": 20,
+      "left": 488
+    }
   },
   "p21": {
-    "p": "You ran as fast as you could and came to the abandoned station, pretty tired.",
+    "p": "You ran as fast as you could avoiding passing trains in technical holes of the tunnel.",
+    "b1": "Next",
+    "b2": "",
+    "b3": "",
+    "f1": "p215",
+    "f2": "",
+    "f3": "",
+    "bg": "21"
+  },
+
+  "p215": {
+    "p": "You came to the abandoned station, pretty tired.",
     "b1": "Take a rest on the platform",
     "b2": "Continue marathon",
     "b3": "",
     "f1": "p211",
     "f2": "p1113213",
     "f3": "",
-    "bg": "21"
+    "bg": "215",
+    "get": {
+      "name": "Bulbasaur",
+      "bg": "4",
+      "width": 35,
+      "height": 35,
+      "top": 160,
+      "left": 170
+    }
   },
   "p211": {
     "p": "You decided to relax on the platform while the train was passing. Now you can continue your journey.",
@@ -662,7 +802,7 @@
     "b2": "Continue your trip",
     "b3": "",
     "f1": "p12112311",
-    "f2": "p12112312",
+    "f2": "p1211231112",
     "f3": "",
     "bg": "1211231"
   },
@@ -674,7 +814,15 @@
     "f1": "p121123111",
     "f2": "",
     "f3": "",
-    "bg": "12112311"
+    "bg": "12112311",
+    "get": {
+      "name": "Pikachu",
+      "bg": "1",
+      "width": 55,
+      "height": 55,
+      "top": 155,
+      "left": 180
+    }
   },
   "p121123111": {
     "p": "You decided to take a photo of the train, but the workers saw the flash of your camera!",
@@ -711,10 +859,18 @@
     "b1": "Finish your journey!",
     "b2": "",
     "b3": "",
-    "f1": "pfinish",
+    "f1": "p777",
     "f2": "",
     "f3": "",
-    "bg": "12112311121"
+    "bg": "12112311121",
+    "get": {
+      "name": "Mew",
+      "bg": "6",
+      "width": 35,
+      "height": 55,
+      "top": 200,
+      "left": 180
+    }
   },
   "p1211111": {
     "p": "You heard workers talking on the next station, so you decided to go back to square tunnels.",
@@ -724,6 +880,24 @@
     "f1": "p1211231",
     "f2": "",
     "f3": "",
-    "bg": "1211111"
+    "bg": "1211111",
+    "get": {
+      "name": "Eevee",
+      "bg": "2",
+      "width": 35,
+      "height": 35,
+      "top": 275,
+      "left": 288
+    }
+  },
+  "p777": {
+    "p": "You successfully completed the plot!",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f": "",
+    "f2": "",
+    "f3": "",
+    "bg": "777"
   }
 }

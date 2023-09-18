@@ -6,6 +6,7 @@ import { TouchableOpacity } from "react-native";
 
 function Homescreen() {
   const [lang, chLang] = useState("en");
+  const [plotBtn, togglePlotBtn] = useState(false);
   const navigation = useNavigation();
   const main = require("../src/images/main-1.jpg");
 
@@ -22,10 +23,28 @@ function Homescreen() {
             {lang === "en" ? "language: en" : "язык: рус"}
           </Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          className="bg-[#21252980] p-2 my-1 rounded items-center justify-center absolute top-20 left-6"
+          onPress={() => {
+            togglePlotBtn(!plotBtn);
+          }}
+        >
+          <Text className="text-[#fcf6bd] text-xl font-bold">
+            {plotBtn
+              ? lang === "en"
+                ? "map:  shown"
+                : "карта: показана"
+              : lang === "en"
+              ? "map:  hidden"
+              : "карта: спрятана"}
+          </Text>
+        </TouchableOpacity>
         <View className="flex items-center mt-40">
           <TouchableOpacity
             className="bg-[#21252980] p-2 my-1 rounded items-center"
-            onPress={() => navigation.navigate("Intro", { lang: lang })}
+            onPress={() =>
+              navigation.navigate("Intro", { lang: lang, plotBtn: plotBtn })
+            }
           >
             <Text className="text-[#fcf6bd] text-xl font-bold">
               {lang === "en" ? "Play" : "Играть"}

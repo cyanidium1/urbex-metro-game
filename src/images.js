@@ -28,6 +28,7 @@ const images = {
   p121121: require("./images/1111.jpg"),
   p2: require("./images/2.jpg"),
   p21: require("./images/21.jpg"),
+  p215: require("./images/215.jpg"),
   p211: require("./images/211.jpg"),
   p1211231: require("./images/1211231.jpg"),
   p12112311: require("./images/12112311.jpg"),
@@ -64,6 +65,27 @@ const images = {
   pb1131112112: require("./images/b1131112112.jpg"),
   pb1131113: require("./images/b1131113.jpg"),
   pb11311131: require("./images/b11311131.jpg"),
+  p777: require("./images/777.jpg"),
+  mapru: require("./plot/plot.jpg"),
+  mapen: require("./plot/ploten.jpg"),
+  // inventory
+  boltcutter: require("./images/boltcutter.png"),
+  // pockemon
+  1: require("./images/pockemons/1.png"),
+  2: require("./images/pockemons/2.png"),
+  3: require("./images/pockemons/3.png"),
+  4: require("./images/pockemons/4.png"),
+  5: require("./images/pockemons/5.png"),
+  6: require("./images/pockemons/6.png"),
+  7: require("./images/pockemons/7.png"),
+  8: require("./images/pockemons/8.png"),
+  9: require("./images/pockemons/9.png"),
+  10: require("./images/pockemons/10.png"),
+  11: require("./images/pockemons/11.png"),
+  12: require("./images/pockemons/12.png"),
+  13: require("./images/pockemons/13.png"),
+  14: require("./images/pockemons/14.png"),
+  15: require("./images/pockemons/15.png"),
 };
 
 export default images;

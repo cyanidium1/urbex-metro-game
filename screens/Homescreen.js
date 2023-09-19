@@ -47,7 +47,7 @@ function Homescreen() {
               : "карта: спрятана"}
           </Text>
         </TouchableOpacity>
-        <View className="flex items-center mt-40">
+        <View className="flex items-center mt-32">
           <TouchableOpacity
             className="bg-[#21252980] p-2 my-1 rounded items-center"
             onPress={() => {
@@ -57,7 +57,15 @@ function Homescreen() {
             }}
           >
             <Text className="text-[#fcf6bd] text-xl font-bold">
-              {lang === "en" ? "Play" : "Играть"}
+              {lang === "en" ? "Continue" : "Продолжить"}
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            className="bg-[#21252980] p-2 my-1 rounded items-center"
+            onPress={() => navigation.navigate("Finish")}
+          >
+            <Text className="text-[#fcf6bd] text-xl font-bold">
+              {lang === "en" ? "New game" : "Новая игра"}
             </Text>
           </TouchableOpacity>
           {/* <Button title="About" onPress={() => navigation.navigate("About")} /> */}

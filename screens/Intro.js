@@ -11,6 +11,7 @@ import plotru from "../src/plot/plotru.json";
 import { useNavigation, useRoute } from "@react-navigation/core";
 import { TouchableOpacity } from "react-native";
 import { useSelector } from "react-redux";
+import MenuButton from "./Components/MenuButton";
 
 const Intro = () => {
   const lang = useSelector((state) => state.game.lang);
@@ -55,16 +56,7 @@ const Intro = () => {
             {displayText}
           </Text>
         </View>
-        <View className="absolute top-2 left-2">
-          <TouchableOpacity
-            className="bg-[#2a2a2a80] p-1 my-1 rounded items-center justify-center"
-            onPress={() => navigation.navigate("Home")}
-          >
-            <Text className="text-[#fcf6bd] text-base font-bold">
-              {lang === "en" ? "Menu" : "Меню"}
-            </Text>
-          </TouchableOpacity>
-        </View>
+        <MenuButton />
         <View className="absolute bottom-0 right-4">
           <TouchableOpacity
             className="bg-[#2d2d2d80] p-1 my-1 rounded items-center justify-center"

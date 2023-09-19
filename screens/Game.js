@@ -10,18 +10,19 @@ import {
 import ploten from "../src/plot/plot.json";
 import plotru from "../src/plot/plotru.json";
 import * as Animatable from "react-native-animatable";
-import { useNavigation, useRoute } from "@react-navigation/native";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  updateInv,
-  toggleShowMap,
-  setFrame,
-  updateHistory,
-} from "../redux/gameSlice";
+import { updateInv, setFrame, updateHistory } from "../redux/gameSlice";
 import images from "../src/images";
+import MenuButton from "./Components/MenuButton";
+import HiddenBtns from "./Components/HiddenBtns";
+import VariantBtns from "./Components/VariantBtns";
+import ScnDescription from "./Components/ScnDescription";
+import UndoBtn from "./Components/UndoBtn";
+import CheatMap from "./Components/CheatMap";
+import CheatBtn from "./Components/CheatBtn";
+import FindTheThing from "./Components/FindTheThing";
 
 const Game = () => {
-  const navigation = useNavigation();
   // state
   const dispatch = useDispatch();
   const lang = useSelector((state) => state.game.lang);
@@ -116,27 +117,16 @@ const Game = () => {
       <ImageBackground source={images[frame]} className="cover flex-1">
         {/* find the thing */}
         {scene.get && !inv.includes(scene.get.bg) && (
-          <TouchableOpacity
-            onPress={() => foundThing()}
-            className="z-10 absolute flex flex-col"
-            style={{
-              width: scene.get.width,
-              height: scene.get.height,
-              top: scene.get.top,
-              left: scene.get.left,
-            }}
-          >
-            <Image
-              className="w-full h-full object-contain"
-              source={images[scene.get.bg]}
-            />
-          </TouchableOpacity>
+          <FindTheThing
+            foundThing={foundThing}
+            image={images[scene.get.bg]}
+            scene={scene}
+          />
         )}
         {imageVisible && (
           <Animatable.View
             className="flex-1 "
             animation="fadeIn"
-            // delay={500}
             duration={1500}
           >
             {/*show frame for debug */}
@@ -144,109 +134,17 @@ const Game = () => {
               FR: {frame + " "}
             </Text>
             {/* cheat map */}
-            {cheats && (
-              <TouchableOpacity
-                onPress={() => showCheats(false)}
-                className="z-20 absolute flex flex-col justify-center items-center w-full h-full"
-              >
-                <Animatable.View
-                  className="w-full h-full"
-                  animation="zoomIn"
-                  duration={1500}
-                >
-                  <Image
-                    className="w-full h-full object-contain"
-                    source={lang === "en" ? images.mapen : images.mapru}
-                  />
-                </Animatable.View>
-              </TouchableOpacity>
-            )}
+            <CheatMap cheats={cheats} images={images} showCheats={showCheats} />
             <View className="flex-1">
               {/* top buttons */}
-              <View className="absolute top-2 left-2">
-                <TouchableOpacity
-                  className="bg-[#2f2f2f80] p-1 my-1 rounded items-center justify-center"
-                  onPress={() => navigation.navigate("Home")}
-                >
-                  <Text className="text-[#fcf6bd] text-base font-bold">
-                    {lang === "en" ? "Menu" : "Меню"}
-                  </Text>
-                </TouchableOpacity>
-                {/* cheat map button */}
-                {showMap && (
-                  <TouchableOpacity
-                    className="bg-[#2f2f2f80] p-1 my-1 rounded items-center justify-center"
-                    onPress={() => showCheats(!cheats)}
-                  >
-                    <Text className="text-[#fcf6bd] text-base font-bold">
-                      {lang === "en" ? "Map" : "Карта"}
-                    </Text>
-                  </TouchableOpacity>
-                )}
-              </View>
-              <View className="absolute top-2 right-2">
-                <TouchableOpacity
-                  onPress={ctrlZ}
-                  className="bg-[#2e2e2e80] p-1 my-1 rounded items-center justify-center"
-                >
-                  <Text className="text-[#fcf6bd] text-base font-bold">
-                    {lang === "en" ? "Undo" : "Шаг назад"}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-
-              {/* hidden btns positioned absolutely */}
-              {[1, 2, 3, 4, 5].map((buttonIndex) => {
-                const hb = scene[`hb${buttonIndex}`];
-                if (hb) {
-                  return (
-                    <TouchableOpacity
-                      key={buttonIndex}
-                      style={{
-                        position: "absolute",
-
-                        // for dev
-                        // backgroundColor: "red",
-
-                        // patch to use same plot in web and mobile versions
-
-                        width: parseInt(hb[`width`].slice(0, -2)),
-                        height: parseInt(hb[`height`].slice(0, -2)),
-                        top: parseInt(hb[`top`].slice(0, -2)) - 145,
-                        left: parseInt(hb[`left`].slice(0, -2)),
-                      }}
-                      onPress={() => onButtonClick(hb[`hf${buttonIndex}`])}
-                    />
-                  );
-                }
-                return null;
-              })}
-
+              <MenuButton />
+              {showMap && <CheatBtn cheats={cheats} showCheats={showCheats} />}
+              <UndoBtn ctrlZ={ctrlZ} />
+              <HiddenBtns scene={scene} onButtonClick={onButtonClick} />
+              {/* bottom text and btns */}
               <View className="absolute bottom-0 w-full p-2 py-1 bg-[#333333a3] rounded-t-2xl">
-                <Text className="text-base text-white font-bold text-center">
-                  {scene.p}
-                </Text>
-                <View className="flex flex-row justify-around flex-wrap">
-                  {[1, 2, 3, 4, 5].map((buttonIndex) => {
-                    const buttonText = scene[`b${buttonIndex}`];
-                    if (buttonText) {
-                      return (
-                        <TouchableOpacity
-                          key={buttonIndex}
-                          onPress={() =>
-                            onButtonClick(scene[`f${buttonIndex}`], buttonIndex)
-                          }
-                          className="bg-[#2f2f2f80] p-1 my-1 rounded items-center justify-center"
-                        >
-                          <Text className="text-[#fcf6bd] text-base font-bold">
-                            {buttonText}
-                          </Text>
-                        </TouchableOpacity>
-                      );
-                    }
-                    return null;
-                  })}
-                </View>
+                <ScnDescription text={scene.p} />
+                <VariantBtns scene={scene} onButtonClick={onButtonClick} />
               </View>
             </View>
           </Animatable.View>

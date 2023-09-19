@@ -4,6 +4,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Homescreen from "./screens/Homescreen";
 import Game from "./screens/Game";
 import Intro from "./screens/Intro";
+import Finish from "./screens/Finish";
+
 import { StatusBar } from "react-native";
 import { Provider } from "react-redux";
 import store from "./redux/store";
@@ -29,6 +31,11 @@ export default function App() {
           <Stack.Screen
             name="Intro"
             component={Intro}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Finish"
+            component={Finish}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

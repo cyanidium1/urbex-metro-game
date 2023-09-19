@@ -3,10 +3,18 @@ import { View, Text, SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import { TouchableOpacity } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
+import { chLang, toggleShowMap } from "../redux/gameSlice";
 
 function Homescreen() {
-  const [lang, chLang] = useState("en");
-  const [plotBtn, togglePlotBtn] = useState(false);
+  const dispatch = useDispatch();
+  // const [lang, chLang] = useState("en");
+  const lang = useSelector((state) => state.game.lang);
+  const history = useSelector((state) => state.game.history);
+
+  // const [plotBtn, togglePlotBtn] = useState(false);
+  const showMap = useSelector((state) => state.game.showMap);
+
   const navigation = useNavigation();
   const main = require("../src/images/main-1.jpg");
 
@@ -16,7 +24,7 @@ function Homescreen() {
         <TouchableOpacity
           className="bg-[#21252980] p-2 my-1 rounded items-center justify-center absolute top-6 left-6"
           onPress={() => {
-            lang === "en" ? chLang("ru") : chLang("en");
+            lang === "en" ? dispatch(chLang("ru")) : dispatch(chLang("en"));
           }}
         >
           <Text className="text-[#fcf6bd] text-xl font-bold">
@@ -26,11 +34,11 @@ function Homescreen() {
         <TouchableOpacity
           className="bg-[#21252980] p-2 my-1 rounded items-center justify-center absolute top-20 left-6"
           onPress={() => {
-            togglePlotBtn(!plotBtn);
+            dispatch(toggleShowMap(!showMap));
           }}
         >
           <Text className="text-[#fcf6bd] text-xl font-bold">
-            {plotBtn
+            {showMap
               ? lang === "en"
                 ? "map:  shown"
                 : "карта: показана"
@@ -42,9 +50,11 @@ function Homescreen() {
         <View className="flex items-center mt-40">
           <TouchableOpacity
             className="bg-[#21252980] p-2 my-1 rounded items-center"
-            onPress={() =>
-              navigation.navigate("Intro", { lang: lang, plotBtn: plotBtn })
-            }
+            onPress={() => {
+              history.length > 1
+                ? navigation.navigate("Game")
+                : navigation.navigate("Intro");
+            }}
           >
             <Text className="text-[#fcf6bd] text-xl font-bold">
               {lang === "en" ? "Play" : "Играть"}

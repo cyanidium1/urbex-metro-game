@@ -10,11 +10,10 @@ import ploten from "../src/plot/plot.json";
 import plotru from "../src/plot/plotru.json";
 import { useNavigation, useRoute } from "@react-navigation/core";
 import { TouchableOpacity } from "react-native";
+import { useSelector } from "react-redux";
 
 const Intro = () => {
-  const {
-    params: { lang, plotBtn },
-  } = useRoute();
+  const lang = useSelector((state) => state.game.lang);
   let plot;
   switch (lang) {
     case "ru":
@@ -69,9 +68,7 @@ const Intro = () => {
         <View className="absolute bottom-0 right-4">
           <TouchableOpacity
             className="bg-[#2d2d2d80] p-1 my-1 rounded items-center justify-center"
-            onPress={() =>
-              navigation.navigate("Game", { lang: lang, plotBtn: plotBtn })
-            }
+            onPress={() => navigation.navigate("Game")}
           >
             <Text className="text-[#fcf6bd] text-base font-bold">
               {lang === "en" ? "Next" : "Далее"}

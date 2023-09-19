@@ -11,27 +11,37 @@ import ploten from "../src/plot/plot.json";
 import plotru from "../src/plot/plotru.json";
 import * as Animatable from "react-native-animatable";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  updateInv,
+  toggleShowMap,
+  setFrame,
+  updateHistory,
+} from "../redux/gameSlice";
 import images from "../src/images";
 
 const Game = () => {
   const navigation = useNavigation();
+  // state
+  const dispatch = useDispatch();
+  const lang = useSelector((state) => state.game.lang);
+  const inv = useSelector((state) => state.game.inv);
+  const showMap = useSelector((state) => state.game.showMap);
+  const frame = useSelector((state) => state.game.frame);
+  const history = useSelector((state) => state.game.history);
+  // local state
+  const [cheats, showCheats] = useState(false);
 
-  const [inv, updInv] = useState([""]);
-  const [showMap, toggleShowMap] = useState(false);
-  const [frame, changeFrame] = useState("p0"); // p0
-  const [history, updHistory] = useState(["p0"]);
-  const [imageVisible, setImageVisible] = useState(true);
   // animation
+  const [imageVisible, setImageVisible] = useState(false);
   useEffect(() => {
     setImageVisible(false);
     setTimeout(() => {
       setImageVisible(true);
     }, 500);
   }, [frame]);
+
   // lang settings
-  const {
-    params: { lang, plotBtn },
-  } = useRoute();
   let plot;
   switch (lang) {
     case "ru":
@@ -46,6 +56,9 @@ const Game = () => {
   const scene = plot[frame];
   // controls
   function onButtonClick(click, buttonIndex) {
+    console.log("inv:", inv);
+    console.log("click:", click);
+    console.log("buttonIndex:", buttonIndex);
     const thing = scene[`b${buttonIndex}if`];
     if (thing) {
       if (!inv.includes(thing)) {
@@ -55,7 +68,7 @@ const Game = () => {
     }
     if (click.includes("add")) {
       if (!inv.includes(click)) {
-        updInv([...inv, click]);
+        dispatch(updateInv([...inv, click]));
         alert(click);
         return;
       }
@@ -65,29 +78,32 @@ const Game = () => {
       alert("you finished!");
     }
     if (click === "ptryAgain") {
-      changeFrame("p0");
-      updHistory(["p0"]);
+      dispatch(setFrame("p0"));
+      dispatch(updateHistory(["p0"]));
       return;
     }
 
-    changeFrame(click);
-    updHistory([...history, click]);
+    dispatch(setFrame(click));
+    dispatch(updateHistory([...history, click]));
   }
   // undo btn
   function ctrlZ() {
     if (history.length > 1) {
-      changeFrame(history[history.length - 2]);
-      updHistory(history.slice(0, -1));
+      const newFrame = history[history.length - 2];
+      const newHistory = history.slice(0, -1);
+
+      dispatch(setFrame(newFrame));
+      dispatch(updateHistory(newHistory));
+
       return;
     }
-    // alert("wanna return up to your birthday?");
   }
   // find thing
   function foundThing() {
     if (inv.includes(scene.get.bg)) {
       return;
     }
-    updInv([...inv, scene.get.bg]);
+    dispatch(updateInv([...inv, scene.get.bg]));
     alert(
       lang === "en"
         ? `You found a ${scene.get.name}`
@@ -127,11 +143,11 @@ const Game = () => {
             <Text className="absolute text-2xl text-white bg-black">
               FR: {frame + " "}
             </Text>
-
-            {showMap && (
+            {/* cheat map */}
+            {cheats && (
               <TouchableOpacity
-                onPress={() => toggleShowMap(false)}
-                className="z-10 absolute flex flex-col justify-center items-center w-full h-full"
+                onPress={() => showCheats(false)}
+                className="z-20 absolute flex flex-col justify-center items-center w-full h-full"
               >
                 <Animatable.View
                   className="w-full h-full"
@@ -156,10 +172,11 @@ const Game = () => {
                     {lang === "en" ? "Menu" : "Меню"}
                   </Text>
                 </TouchableOpacity>
-                {plotBtn && (
+                {/* cheat map button */}
+                {showMap && (
                   <TouchableOpacity
                     className="bg-[#2f2f2f80] p-1 my-1 rounded items-center justify-center"
-                    onPress={() => toggleShowMap(!showMap)}
+                    onPress={() => showCheats(!cheats)}
                   >
                     <Text className="text-[#fcf6bd] text-base font-bold">
                       {lang === "en" ? "Map" : "Карта"}

@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const gameSlice = createSlice({
   name: "game",
   initialState: {
-    inv: [],
+    inv: ["1", "2", "3", "4", "5", "6", "7"],
     // "1", "2", "3", "4", "5", "6", "7"
     achs: [],
     showMap: false,
-    frame: "p0",
+    frame: "pb1131112111",
     history: ["p0"],
     lang: "en",
   },

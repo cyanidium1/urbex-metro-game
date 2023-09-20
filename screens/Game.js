@@ -81,7 +81,8 @@ const Game = () => {
     if (click.includes("add")) {
       if (!inv.includes(click)) {
         dispatch(updateInv([...inv, click]));
-        const msg = lang === "en" ? "ok" : "ok";
+        const msg =
+          lang === "en" ? "You leaved a message..." : "Вы оставили послание...";
         showToast(msg, "success");
         return;
       }

@@ -12,7 +12,7 @@
     "bg": "0"
   },
   "p1": {
-    "p": "You decided to climb through a ventilation shaft located in a secluded courtyard between panel houses. However, you find out that the door is locked! Choose your variant. Hint: tap the grid to sneak in or the door to break in.",
+    "p": "You decided to climb through a ventilation shaft. However, you find out that the door is locked! Choose your variant. Hint: tap the grid to sneak in or the door to break in.",
     "bg": "1",
     "b1": "",
     "b2": "",
@@ -134,10 +134,10 @@
   },
   "p11133": {
     "p": "You waited for a train to pull into the station and when the crowding started you carefully opened the gate from the inside, entered the train and successfully escaped. ",
-    "b1": "Try again!",
+    "b1": "Finish your journey!",
     "b2": "",
     "b3": "",
-    "f1": "ptryAgain",
+    "f1": "p777",
     "f2": "",
     "f3": "",
     "bg": "11133"
@@ -338,7 +338,7 @@
     "bg": "1111"
   },
   "p121123": {
-    "p": "You were lucky and the employee did not raise the alarm. You have successfully reached the connection of round tunnels with square ones.\n(to be continued)",
+    "p": "You were lucky and the employee did not raise the alarm. You have successfully reached the connection of round tunnels with square ones.",
     "b1": "Next",
     "b2": "",
     "b3": "",
@@ -744,12 +744,24 @@
   "pb1131112111": {
     "p": "You felt lonely and decided to talk to someone. Who will you call?",
     "b1": "Call to your friend",
+    "b1if": "nothing",
+    "b1error": "He didn't answered cos normal people sleep at night",
     "b2": "Call to president",
     "b3": "Go back",
     "f1": "add_friendCall",
-    "f2": "add_presidentCall",
+    "f2": "pb11311121111",
     "f3": "pb113111211",
     "bg": "b1131112111"
+  },
+  "pb11311121111": {
+    "p": "You reached the president via secured state line, but at the other end of the line they did not appreciate your prank and took appropriate measures. For the next 15 days you were no longer lonely.",
+    "b1": "Try again! (not touching the phones)",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "pb113111211",
+    "bg": "pb11311121111"
   },
   "pb1131112112": {
     "p": "You find yourself in a room with old telegraphs. There was a door back to main room of command center. You have a desire to print something.",

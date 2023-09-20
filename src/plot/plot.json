@@ -296,7 +296,16 @@
     "f1": "p1211111",
     "f2": "",
     "f3": "",
-    "bg": "121111"
+    "bg": "121111",
+    "get": {
+      "altText": "All we had to do was follow the damn train!",
+      "name": "Fail CJ's mission 🚇",
+      "bg": "ee_cjey",
+      "width": 100,
+      "height": 100,
+      "top": 190,
+      "left": 400
+    }
   },
   "p12112": {
     "p": "You decided to go in the direction of the new square tunnels. When you were passing the station, a cleaning lady saw you from far away and shouted something to you. ",
@@ -358,10 +367,10 @@
     "f3": "",
     "bg": "b1",
     "hb1": {
-      "width": "26px",
-      "height": "43px",
+      "width": "80px",
+      "height": "80px",
       "top": "273px",
-      "left": "600px",
+      "left": "570px",
       "hf1": "pb11"
     }
   },
@@ -394,6 +403,15 @@
       "top": "298px",
       "left": "706px",
       "hf3": "pb115"
+    },
+    "get": {
+      "altText": "Don't do it on my face!",
+      "name": "You caught a headcrab 🦀",
+      "bg": "ee_headcrab",
+      "width": 25,
+      "height": 25,
+      "top": 175,
+      "left": 430
     }
   },
   "pb113": {
@@ -438,7 +456,7 @@
       "hf2": "pb1142"
     },
     "hb3": {
-      "width": "106px",
+      "width": "240px",
       "height": "348px",
       "top": "163px",
       "left": "207px",
@@ -665,7 +683,7 @@
     "p": "You entered the command center part of the bunker.",
     "b1": "Go see the telephone and telegraph center",
     "b1if": "phoneDoorOpened",
-    "b1error": "Looks like this door closed from inside and it is not possible to brake it",
+    "b1error": "Looks like this door closed from inside...",
     "b2": "Go see the power plant room",
     "b3": "Go back to subway line",
     "f1": "pb113111211",
@@ -675,8 +693,8 @@
   },
   "pb113111212": {
     "p": "You have examined these two V12 diesel engines - the heart of this bunker... Where to go next?",
-    "b1": " touch_left",
-    "b2": "touch_right",
+    "b1": "",
+    "b2": "",
     "b3": "",
     "f1": "pb113111211",
     "f2": "pb11311121",
@@ -689,6 +707,20 @@
       "height": 37,
       "top": 151,
       "left": 398
+    },
+    "hb1": {
+      "width": "100px",
+      "height": "300px",
+      "top": "190px",
+      "left": "0px",
+      "hf1": "pb113111211"
+    },
+    "hb2": {
+      "width": "140px",
+      "height": "250px",
+      "top": "254px",
+      "left": "650px",
+      "hf2": "pb11311121"
     }
   },
   "pb113111211": {
@@ -784,6 +816,49 @@
       "height": 35,
       "top": 160,
       "left": 170
+    },
+    "hb3": {
+      "width": "110px",
+      "height": "180px",
+      "top": "200px",
+      "left": "20px",
+      "hf3": "pb2151"
+    }
+  },
+  "pb2151": {
+    "p": "You found a secret passage!",
+    "b1": "Go back",
+    "b2": "",
+    "b3": "",
+    "f1": "p211",
+    "f2": "",
+    "f3": "",
+    "bg": "b2151",
+    "hb3": {
+      "width": "200px",
+      "height": "200px",
+      "top": "240px",
+      "left": "400px",
+      "hf3": "pb21511"
+    }
+  },
+  "pb21511": {
+    "p": "You found a secret uncle Sam's arsenal in abandoned bunker!",
+    "b1": "Go back",
+    "b2": "",
+    "b3": "",
+    "f1": "p211",
+    "f2": "",
+    "f3": "",
+    "bg": "b21511",
+    "get": {
+      "altText": "Wrong game!",
+      "name": "You found a mimigun 🔫",
+      "bg": "ee_minigun",
+      "width": 220,
+      "height": 60,
+      "top": 250,
+      "left": 270
     }
   },
   "p211": {

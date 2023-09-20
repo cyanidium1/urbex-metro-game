@@ -9,6 +9,8 @@ import Finish from "./screens/Finish";
 import { StatusBar } from "react-native";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import Settings from "./screens/Settings";
+import Toast from "react-native-toast-message";
 
 const Stack = createStackNavigator();
 
@@ -38,7 +40,13 @@ export default function App() {
             component={Finish}
             options={{ headerShown: false }}
           />
+          <Stack.Screen
+            name="Settings"
+            component={Settings}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
+        <Toast />
       </NavigationContainer>
     </Provider>
   );

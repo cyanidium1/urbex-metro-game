@@ -65,7 +65,12 @@ const images = {
   pb1131112112: require("./images/b1131112112.jpg"),
   pb1131113: require("./images/b1131113.jpg"),
   pb11311131: require("./images/b11311131.jpg"),
+  // bonus level
+  pb2151: require("./images/b2151.jpg"),
+  pb21511: require("./images/b21511.jpg"),
+  // end
   p777: require("./images/777.jpg"),
+  // maps
   mapru: require("./plot/plot.jpg"),
   mapen: require("./plot/ploten.jpg"),
   // inventory
@@ -86,6 +91,10 @@ const images = {
   13: require("./images/pockemons/13.png"),
   14: require("./images/pockemons/14.png"),
   15: require("./images/pockemons/15.png"),
+  // easter eggs
+  ee_minigun: require("./images/easterEggs/ee_minigun.png"),
+  ee_cjey: require("./images/easterEggs/ee_cjey.png"),
+  ee_headcrab: require("./images/easterEggs/ee_headcrab.png"),
 };
 
 export default images;

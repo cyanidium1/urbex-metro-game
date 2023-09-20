@@ -21,6 +21,8 @@ import UndoBtn from "./Components/UndoBtn";
 import CheatMap from "./Components/CheatMap";
 import CheatBtn from "./Components/CheatBtn";
 import FindTheThing from "./Components/FindTheThing";
+import Toast from "react-native-toast-message";
+import { useNavigation } from "@react-navigation/native";
 
 const Game = () => {
   // state
@@ -32,7 +34,14 @@ const Game = () => {
   const history = useSelector((state) => state.game.history);
   // local state
   const [cheats, showCheats] = useState(false);
-
+  // notifs
+  const showToast = (message, typeOfMsg, text2) => {
+    Toast.show({
+      type: typeOfMsg,
+      text1: message,
+      text2: text2,
+    });
+  };
   // animation
   const [imageVisible, setImageVisible] = useState(false);
   useEffect(() => {
@@ -41,7 +50,8 @@ const Game = () => {
       setImageVisible(true);
     }, 500);
   }, [frame]);
-
+  // nav
+  const navigation = useNavigation();
   // lang settings
   let plot;
   switch (lang) {
@@ -57,26 +67,30 @@ const Game = () => {
   const scene = plot[frame];
   // controls
   function onButtonClick(click, buttonIndex) {
-    console.log("inv:", inv);
-    console.log("click:", click);
-    console.log("buttonIndex:", buttonIndex);
+    // console.log("inv:", inv);
+    // console.log("click:", click);
+    // console.log("buttonIndex:", buttonIndex);
     const thing = scene[`b${buttonIndex}if`];
     if (thing) {
       if (!inv.includes(thing)) {
-        alert(scene[`b${buttonIndex}error`]);
+        msg = scene[`b${buttonIndex}error`];
+        showToast(msg, "error");
         return;
       }
     }
     if (click.includes("add")) {
       if (!inv.includes(click)) {
         dispatch(updateInv([...inv, click]));
-        alert(click);
+        const msg = lang === "en" ? "ok" : "ok";
+        showToast(msg, "success");
         return;
       }
       return;
     }
     if (click === "p777") {
-      alert("you finished!");
+      navigation.navigate("Finish");
+
+      return;
     }
     if (click === "ptryAgain") {
       dispatch(setFrame("p0"));
@@ -105,11 +119,15 @@ const Game = () => {
       return;
     }
     dispatch(updateInv([...inv, scene.get.bg]));
-    alert(
+    if (scene.get.altText) {
+      showToast(scene.get.altText, "success", scene.get.name);
+      return;
+    }
+    const msg =
       lang === "en"
         ? `You found a ${scene.get.name}`
-        : `Вы нашли ${scene.get.name}`
-    );
+        : `Вы нашли ${scene.get.name}`;
+    showToast(msg, "success");
   }
 
   return (
@@ -130,9 +148,9 @@ const Game = () => {
             duration={1500}
           >
             {/*show frame for debug */}
-            <Text className="absolute text-2xl text-white bg-black">
+            {/* <Text className="absolute text-2xl text-white bg-black">
               FR: {frame + " "}
-            </Text>
+            </Text> */}
             {/* cheat map */}
             <CheatMap cheats={cheats} images={images} showCheats={showCheats} />
             <View className="flex-1">

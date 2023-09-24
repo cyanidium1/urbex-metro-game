@@ -11,7 +11,12 @@ import ploten from "../src/plot/plot.json";
 import plotru from "../src/plot/plotru.json";
 import * as Animatable from "react-native-animatable";
 import { useSelector, useDispatch } from "react-redux";
-import { updateInv, setFrame, updateHistory } from "../redux/gameSlice";
+import {
+  updateInv,
+  setFrame,
+  updateHistory,
+  setProg,
+} from "../redux/gameSlice";
 import images from "../src/images";
 import MenuButton from "./Components/MenuButton";
 import HiddenBtns from "./Components/HiddenBtns";
@@ -32,6 +37,7 @@ const Game = () => {
   const showMap = useSelector((state) => state.game.showMap);
   const frame = useSelector((state) => state.game.frame);
   const history = useSelector((state) => state.game.history);
+  const progress = useSelector((state) => state.game.progress);
   // local state
   const [cheats, showCheats] = useState(false);
   // notifs
@@ -74,7 +80,7 @@ const Game = () => {
     if (thing) {
       if (!inv.includes(thing)) {
         msg = scene[`b${buttonIndex}error`];
-        showToast(msg, "error");
+        alert(msg);
         return;
       }
     }
@@ -89,8 +95,16 @@ const Game = () => {
       return;
     }
     if (click === "p777") {
-      navigation.navigate("Finish");
-
+      const percentage = (history.length / 45) * 100;
+      const prog = percentage > 100 ? "100%" : Math.floor(percentage) + "%";
+      console.log(prog);
+      dispatch(setProg(prog));
+      navigation.navigate("Finish", {
+        finished: true,
+        message: "kek",
+      });
+      dispatch(updateHistory(["p0"]));
+      dispatch(setFrame("p0"));
       return;
     }
     if (click === "ptryAgain") {

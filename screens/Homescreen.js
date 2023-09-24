@@ -55,6 +55,20 @@ function Homescreen() {
               {lang === "en" ? "Settings" : "Настройки"}
             </Text>
           </TouchableOpacity>
+
+          <TouchableOpacity
+            className="bg-[#21252980] p-2 my-1 rounded items-center w-48"
+            onPress={() =>
+              navigation.navigate("Finish", {
+                finished: false,
+                message: "kek",
+              })
+            }
+          >
+            <Text className="text-[#fcf6bd] text-xl font-bold">
+              {lang === "en" ? "Items" : "Предметы"}
+            </Text>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     </SafeAreaView>

@@ -10,9 +10,9 @@ const VariantBtns = ({ scene, onButtonClick }) => {
           return (
             <TouchableOpacity
               key={buttonIndex}
-              onPress={() =>
-                onButtonClick(scene[`f${buttonIndex}`], buttonIndex)
-              }
+              onPress={() => {
+                onButtonClick(scene[`f${buttonIndex}`], buttonIndex);
+              }}
               className="bg-[#2f2f2f80] p-1 my-1 rounded items-center justify-center"
             >
               <Text className="text-[#fcf6bd] text-base font-bold">

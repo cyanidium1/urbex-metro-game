@@ -3,13 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const gameSlice = createSlice({
   name: "game",
   initialState: {
-    inv: ["1", "2", "3", "4", "5", "6", "7"],
+    inv: [],
     // "1", "2", "3", "4", "5", "6", "7"
     achs: [],
     showMap: false,
-    frame: "pb1131112111",
+    frame: "p0",
     history: ["p0"],
     lang: "en",
+    progress: "",
   },
   reducers: {
     updateInv: (state, action) => {
@@ -27,10 +28,19 @@ const gameSlice = createSlice({
     chLang: (state, action) => {
       state.lang = action.payload;
     },
+    setProg: (state, action) => {
+      state.progress = action.payload;
+    },
   },
 });
 
-export const { updateInv, toggleShowMap, setFrame, updateHistory, chLang } =
-  gameSlice.actions;
+export const {
+  updateInv,
+  toggleShowMap,
+  setFrame,
+  updateHistory,
+  chLang,
+  setProg,
+} = gameSlice.actions;
 
 export default gameSlice.reducer;

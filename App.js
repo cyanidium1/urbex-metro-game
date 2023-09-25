@@ -11,6 +11,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import Settings from "./screens/Settings";
 import Toast from "react-native-toast-message";
+import About from "./screens/About";
 
 const Stack = createStackNavigator();
 
@@ -28,6 +29,11 @@ export default function App() {
           <Stack.Screen
             name="Game"
             component={Game}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="About"
+            component={About}
             options={{ headerShown: false }}
           />
           <Stack.Screen

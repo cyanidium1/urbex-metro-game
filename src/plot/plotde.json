@@ -1,0 +1,1019 @@
+{
+  "buttons": {
+    "play": "Spielen",
+    "about": "Über das Spiel/FAQ",
+    "settings": "Einstellungen",
+    "items": "Artikel",
+    "next": "Nächste",
+    "undo": "Rückgängig machen",
+    "map": "Karte",
+    "menu": "Speisekarte",
+    "gameLang": "Spielsprache: ",
+    "plotMap": "Grundstückskarte: ",
+    "lang": "Deutsch",
+    "reset": "Spielfortschritt zurücksetzen (einschließlich gefundener Dinge)",
+    "contact": "Kontakt",
+    "create": "Erstellen!",
+    "newGame": "Neues Spiel",
+    "tryAgain": "Versuchen Sie es erneut!"
+  },
+  "other": {
+    "visited": "Du besuchtest",
+    "visited2": "aller Standorte!",
+    "items": "geheime Gegenstände von",
+    "youFound": "Du hast ein gefunden ",
+    "found": "Du fandest",
+    "of": "Pokemons von",
+    "completed": "Du hast das Spiel abgeschlossen 🎉",
+    "message": "Du hast eine Nachricht hinterlassen..."
+  },
+  "info": "Dies ist ein 'Visual Novel'-Spiel. Der Spieler wird aufgefordert, verschiedene Handlungsoptionen auszuwählen, nach Gegenständen zu suchen und Entscheidungen zu treffen, die den Verlauf, das Ende des Spiels und den Abschlussprozentsatz bestimmen. Viele Szenen erfordern vom Spieler, auf den Bildschirm zu tippen, um einen Gegenstand (Pokémon, Quest oder Geheimnis) aufzuheben oder zu einem bestimmten Bereich zu gehen (auch wenn dies nicht in der Szenenbeschreibung angegeben ist). Zum Beispiel gibt es an der Stelle einer verlassenen Station einen geheimen Durchgang. Viel Spaß beim Spielen!",
+  "about": "Die hier verwendeten Fotos wurden vom Autor des Projekts von 2016 bis 2018 in der U-Bahn von Kiew aufgenommen. Die Ereignisse basieren auf realen Geschichten. Dieses Projekt stellt den ersten Ausflug des Autors in die mobile Entwicklung dar. Wenn das Spiel positiv aufgenommen wird, plant der Autor, ein umfangreicheres Projekt mit Animationen, der Verwendung von 360-Panoramen und anderen komplexeren Spielmechaniken zu erstellen. Sie können dem Autor jederzeit Feedback oder Vorschläge auf Instagram oder per E-Mail hinterlassen (siehe Kontakte).",
+  "contact": "Sie können den Autor über Instagram oder per E-Mail kontaktieren:",
+  "create": "Sie können ein ähnliches Projekt mit minimalem Programmierkenntnissen erstellen. Dieses Projekt wurde ursprünglich als Engine (JS, React Native) für das Abspielen interaktiver Geschichten im JSON-Format geschrieben und ermöglicht es Ihnen, jede Handlung zu importieren und die Anwendung für Android oder iOS zu kompilieren. Wenn Sie also Ihre eigene Anwendung erstellen möchten, zögern Sie nicht, den Autor zu kontaktieren (siehe Kontakte).",
+  "intro": "Seit Ihrer Kindheit hat Sie die Dunkelheit der U-Bahn-Tunnel angezogen. Beim Fahren unter der Erde haben Sie oft verschiedene Abzweigungen in den Tunneln bemerkt. Nachdem Sie stundenlang vor dem Computer verbracht haben, haben Sie viele Informationen über die U-Bahn der Hauptstadt gefunden und beschlossen, in die aktive Phase der Forschung überzugehen - in diese Tunnel hineinzusteigen!",
+  "p0": {
+    "p": "Sie müssen entscheiden, wie Sie in die Tunnel gelangen. ",
+    "b1": "Versuchen Sie es durch die Belüftung",
+    "b2": "Probieren Sie es vom Bahnhof aus",
+    "b3": "",
+    "f1": "p1",
+    "f2": "p2",
+    "f3": "",
+    "bg": "0"
+  },
+  "p1": {
+    "p": "Sie haben sich entschieden, durch einen Lüftungsschacht zu klettern. ",
+    "bg": "1",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "S. 11",
+    "f2": "S. 12",
+    "f3": "",
+    "hb1": {
+      "width": "60px",
+      "height": "114px",
+      "top": "366px",
+      "left": "357px",
+      "hf1": "S. 11"
+    },
+    "hb2": {
+      "width": "313px",
+      "height": "124px",
+      "top": "214px",
+      "left": "257px",
+      "hf2": "S. 12"
+    }
+  },
+  "p11": {
+    "p": "Du hast das Schloss an der Tür aufgebrochen und bist hineingegangen. ",
+    "b1": "Beginnen Sie mit dem Abstieg",
+    "b2": "Warten Sie aus Sicherheitsgründen 30 Minuten in der Nähe des Lüftungsschachts",
+    "b3": "",
+    "f1": "S. 111",
+    "f2": "S. 112",
+    "f3": "",
+    "bg": "11"
+  },
+  "p111": {
+    "p": "Sie haben die Vorsicht vernachlässigt und sind den vertikalen Schacht hinunter nach unten gegangen. ",
+    "b1": "Geh zurück nach oben",
+    "b2": "Beschleunigen Sie und versuchen Sie zu entkommen",
+    "b3": "",
+    "f1": "S. 1111",
+    "f2": "S. 1112",
+    "f3": "",
+    "bg": "111"
+  },
+  "p1111": {
+    "p": "Du bist nach oben gegangen. ",
+    "b1": "Versuchen Sie es erneut!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p112": {
+    "p": "Das blinkende rote Licht hat Sie gestresst, da es einem Alarm sehr ähnlich war. ",
+    "b1": "Versuchen Sie es erneut!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "112"
+  },
+  "p1112": {
+    "p": "Sie stürmten die restlichen Stufen hinunter in den Zufahrtstunnel zu den Gleisen und umgingen die riesigen Türen.",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "S. 1113",
+    "f2": "",
+    "f3": "",
+    "bg": "1112",
+    "get": {
+      "name": "Umbreon",
+      "bg": "8",
+      "width": 65,
+      "height": 55,
+      "top": 180,
+      "left": 560
+    }
+  },
+  "p1113": {
+    "p": "Unter Umgehung der Fans ging man auf die Gasse. ",
+    "b1": "Laufen Sie entlang der Gleise zum Bahnhof, dessen Lichter in der Ferne zu sehen sind.",
+    "b2": "Laufen Sie vom Bahnhof in die entgegengesetzte Richtung",
+    "b3": "",
+    "f1": "p11131",
+    "f2": "p1113213",
+    "f3": "",
+    "bg": "1113"
+  },
+  "p11131": {
+    "p": "Du bist zum Bahnhof gelaufen. ",
+    "b1": "Versuchen Sie, auf die Plattform zu klettern",
+    "b2": "Betreten Sie den Servicetunnel",
+    "b3": "Verstecken Sie sich hinter der Pforte und warten Sie, bis der Zug am Bahnhof ankommt",
+    "f1": "p111311",
+    "f2": "p11132",
+    "f3": "p11133",
+    "bg": "11131",
+    "get": {
+      "name": "Miau",
+      "bg": "7",
+      "width": 45,
+      "height": 55,
+      "top": 100,
+      "left": 645
+    }
+  },
+  "p111311": {
+    "p": "Unter den überraschten Blicken der Passagiere stiegen Sie in den Bahnhof. ",
+    "b1": "Versuchen Sie es erneut!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p11133": {
+    "p": "Sie warteten darauf, dass ein Zug in den Bahnhof einfuhr, und als der Andrang begann, öffneten Sie vorsichtig das Tor von innen, stiegen in den Zug ein und entkamen erfolgreich. ",
+    "b1": "Beende deine Reise!",
+    "b2": "",
+    "b3": "",
+    "f1": "p777",
+    "f2": "",
+    "f3": "",
+    "bg": "11133"
+  },
+  "p11132": {
+    "p": "Du kletterst in den Wartungsraum und hinaus auf den Balkon über den Gleisen. ",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "p111321",
+    "f2": "",
+    "f3": "",
+    "bg": "11132",
+    "get": {
+      "name": "Jigglypuff",
+      "bg": "12",
+      "width": 35,
+      "height": 35,
+      "top": 260,
+      "left": 220
+    }
+  },
+  "p111321": {
+    "p": "Nachdem Sie die vorbeifahrenden Züge beobachtet hatten, gingen Sie zurück zu den Gleisen. ",
+    "b1": "Versuchen Sie, sich zum Bahnhof zu schleichen",
+    "b2": "",
+    "b3": "Laufen Sie auf dem entgegenkommenden Bahngleis zur nächsten Station",
+    "f1": "p111311",
+    "f2": "",
+    "f3": "p1113213",
+    "bg": "111321"
+  },
+  "p1113212": {
+    "p": "Du bist weitergegangen. ",
+    "b1": "Versuchen Sie es erneut!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1113212"
+  },
+  "p1113213": {
+    "p": "Sie sind in Gegenrichtung gelaufen. ",
+    "b1": "Richten Sie den Fahrer mit einer Taschenlampe an, damit er Sie sehen und den Zug anhalten kann",
+    "b2": "Versuchen Sie, die Drähte an der Tunnelwand einzuhaken",
+    "b3": "Lauf vom Zug weg",
+    "f1": "p11132131",
+    "f2": "p11132132",
+    "f3": "p11132133",
+    "bg": "1113213"
+  },
+  "p11132133": {
+    "p": "Seltsamerweise erweist sich der Zug als schneller als ein rennender Mann, aber durch den hektischen Adrenalinstoß bist du auf den verdammten Usain Bolt umgestiegen und hast es irgendwie auf wundersame Weise geschafft, zu rennen und dich in dem Loch in der Tunnelwand zu verstecken.",
+    "b1": "Erkunden Sie diesen seltsamen Durchgang",
+    "b2": "Lauf zurück zum Bahnhof",
+    "b3": "",
+    "f1": "p111321331",
+    "f2": "p111321332",
+    "f3": "",
+    "bg": "11132133"
+  },
+  "p111321332": {
+    "p": "Als der Lokführer Eindringlinge im Tunnel am Bahnhof meldete, wurden Sie bereits von Polizei und Nationalgarde empfangen. ",
+    "b1": "Versuchen Sie es erneut!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p11132131": {
+    "p": "Sie haben Ihre Taschenlampe in Richtung des Zuges gerichtet. ",
+    "b1": "Versuchen Sie es erneut!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p11132132": {
+    "p": "Sie haben nicht damit gerechnet, dass der Zug riesige Seitenspiegel hat, die Sie von den Kabeln geworfen und über die Gleise verstreut haben.",
+    "b1": "Respawn?",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "11132132"
+  },
+  "p111321331": {
+    "p": "Du hast einen Eingang zum Bunker gefunden! ",
+    "b1": "Versuchen Sie zu schwimmen",
+    "b2": "Versuchen Sie, nach anderen Varianten zu suchen",
+    "b3": "",
+    "f1": "pb2",
+    "f2": "pb1",
+    "f3": "",
+    "bg": "111321331",
+    "get": {
+      "name": "Vaporeon",
+      "bg": "13",
+      "width": 30,
+      "height": 25,
+      "top": 210,
+      "left": 420
+    }
+  },
+  "p12": {
+    "p": "Sie haben es geschafft, das Gitter zu biegen und durch den U-Bahn-Tunnel zu kriechen, aber Sie haben viel Zeit damit verbracht, das Loch zu vergrößern und hineinzukommen. Unter Ihren Füßen klaffte ein Abgrund von mehreren Dutzend Metern. ",
+    "b1": "Beginnen Sie den Abstieg!",
+    "b2": "",
+    "b3": "",
+    "f1": "S. 121",
+    "f2": "",
+    "f3": "",
+    "bg": "11"
+  },
+  "p121": {
+    "p": "Sie gingen gemächlich durch den Tunnel und untersuchten die riesigen metallversiegelten Türen und Lüftungsöffnungen. ",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "S. 1211",
+    "f2": "",
+    "f3": "",
+    "bg": "1112"
+  },
+  "p1211": {
+    "p": "Du bist spät in der Nacht in den Tunnel eingedrungen.  ",
+    "b1": "Gehen Sie nach rechts in Richtung der alten tiefen Tunnel",
+    "b2": "Gehen Sie nach links in Richtung der neuen quadratischen Tunnel",
+    "b3": "",
+    "f1": "p12111",
+    "f2": "p12112",
+    "f3": "",
+    "bg": "1211"
+  },
+  "p12111": {
+    "p": "Auf Ihrem Weg ist Ihnen ein unansehnlicher Durchgang senkrecht zum Haupttunnel aufgefallen ...",
+    "b1": "Entdecken Sie es",
+    "b2": "Überspringen Sie es und gehen Sie weiter",
+    "b3": "",
+    "f1": "p111321331",
+    "f2": "p121111",
+    "f3": "",
+    "bg": "12111"
+  },
+  "p121111": {
+    "p": "Du bist durch Tunnel gelaufen und hast einen stehenden Zug auf deinem Weg getroffen!",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "p1211111",
+    "f2": "",
+    "f3": "",
+    "bg": "121111",
+    "get": {
+      "altText": "Wir mussten nur dem verdammten Zug folgen!",
+      "name": "CJs Mission scheitern lassen 🚇",
+      "bg": "ee_cjey",
+      "width": 100,
+      "height": 100,
+      "top": 190,
+      "left": 400
+    }
+  },
+  "p12112": {
+    "p": "Sie haben sich entschieden, in Richtung der neuen Vierkanttunnel zu gehen.  ",
+    "b1": "Gehen Sie auf sie zu und tun Sie so, als wären Sie ein Arbeiter",
+    "b2": "Lauf",
+    "b3": "Stellen Sie sich vor, Sie hätten den Anruf nicht gehört, und machen Sie weiter",
+    "f1": "p121121",
+    "f2": "p121122",
+    "f3": "p121123",
+    "bg": "12112"
+  },
+  "p121121": {
+    "p": "Die Tarnung scheiterte, weil man weder Weste noch Ausweis dabei hatte. ",
+    "b1": "Versuchen Sie es erneut",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p121122": {
+    "p": "Dir ist die Flucht gelungen, doch an der nächsten Station wartete bereits die Polizei auf dich. ",
+    "b1": "Versuchen Sie es erneut",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p121123": {
+    "p": "Sie hatten Glück und der Mitarbeiter hat keinen Alarm ausgelöst. ",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "p1211231",
+    "f2": "",
+    "f3": "",
+    "bg": "121123"
+  },
+  "p2": {
+    "p": "Du hast beschlossen, das Portal zu zerstören.",
+    "b1": "Laufen!",
+    "b2": "",
+    "b3": "",
+    "f1": "S. 21",
+    "f2": "",
+    "f3": "",
+    "bg": "2"
+  },
+  "pb1": {
+    "p": "Sie haben einen kleinen Raum gefunden, der sich als Pumpstation herausstellte. ",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11",
+    "f2": "",
+    "f3": "",
+    "bg": "b1",
+    "hb1": {
+      "width": "80px",
+      "height": "80px",
+      "top": "273px",
+      "left": "570px",
+      "hf1": "pb11"
+    }
+  },
+  "pb11": {
+    "p": "Die Pumpen liefen laut. ",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "",
+    "f2": "",
+    "f3": "",
+    "bg": "b11",
+    "hb1": {
+      "width": "114px",
+      "height": "173px",
+      "top": "321px",
+      "left": "129px",
+      "hf1": "pb114"
+    },
+    "hb2": {
+      "width": "170px",
+      "height": "198px",
+      "top": "197px",
+      "left": "246px",
+      "hf2": "pb113"
+    },
+    "hb3": {
+      "width": "89px",
+      "height": "209px",
+      "top": "298px",
+      "left": "706px",
+      "hf3": "pb115"
+    },
+    "get": {
+      "altText": "Tu es nicht auf meinem Gesicht!",
+      "name": "Du hast eine Kopfkrabbe gefangen 🦀",
+      "bg": "ee_headcrab",
+      "width": 25,
+      "height": 25,
+      "top": 175,
+      "left": 430
+    }
+  },
+  "pb113": {
+    "p": "Sie haben sich daran erinnert, was Ihnen im Half-Life-Spiel beigebracht wurde, sind durch die Belüftung geklettert und sind dann im Filter-Belüftungsraum gelandet. ",
+    "b1": "Weitermachen",
+    "b2": "",
+    "b3": "",
+    "f1": "pb1131",
+    "f2": "",
+    "f3": "",
+    "bg": "b113",
+    "get": {
+      "name": "Raupe",
+      "bg": "9",
+      "width": 30,
+      "height": 30,
+      "top": 110,
+      "left": 308
+    }
+  },
+  "pb114": {
+    "p": "Sie haben den Filterraum betreten. ",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "",
+    "f2": "",
+    "f3": "",
+    "bg": "b114",
+    "hb1": {
+      "width": "70px",
+      "height": "90px",
+      "top": "283px",
+      "left": "488px",
+      "hf1": "pb1141"
+    },
+    "hb2": {
+      "width": "154px",
+      "height": "203px",
+      "top": "283px",
+      "left": "10px",
+      "hf2": "pb1142"
+    },
+    "hb3": {
+      "width": "240px",
+      "height": "348px",
+      "top": "163px",
+      "left": "207px",
+      "hf3": "pb1143"
+    }
+  },
+  "pb115": {
+    "p": "Du hast beschlossen, umzukehren.  ",
+    "b1": "Versuchen Sie es erneut!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "pb1143": {
+    "p": "Du hast beschlossen, dich hinter den Fässern zu verstecken. ",
+    "b1": "Weitermachen",
+    "b2": "",
+    "b3": "",
+    "f1": "pb1131",
+    "f2": "",
+    "f3": "",
+    "bg": "b1143"
+  },
+  "pb1141": {
+    "p": "Sie haben beschlossen, die Erkundung fortzusetzen. ",
+    "b1": "Versuchen Sie es erneut!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "pb1142": {
+    "p": "Ohne lange nachzudenken, sind Sie in eine dunkle Passage gesprungen. ",
+    "b1": "Weitermachen",
+    "b2": "",
+    "b3": "",
+    "f1": "S. 1211",
+    "f2": "",
+    "f3": "",
+    "bg": "b1142"
+  },
+  "pb1131": {
+    "p": "Sie haben den Hauptblock des Bunkers betreten.",
+    "b1": "Weitermachen",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11311",
+    "f2": "",
+    "f3": "",
+    "bg": "b1131"
+  },
+  "pb11311": {
+    "p": "Du hast angefangen, durch die Labyrinthe der Tunnel zu laufen ...",
+    "b1": "Weitermachen",
+    "b2": "",
+    "b3": "",
+    "f1": "pb113111",
+    "f2": "",
+    "f3": "",
+    "bg": "b11311",
+    "get": {
+      "name": "Diglett",
+      "bg": "14",
+      "width": 40,
+      "height": 40,
+      "top": 275,
+      "left": 648
+    }
+  },
+  "pb113111": {
+    "p": "Sie sind zum Hauptblock gekommen. ",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "",
+    "f2": "",
+    "f3": "",
+    "bg": "b113111",
+    "hb1": {
+      "width": "320px",
+      "height": "134px",
+      "top": "410px",
+      "left": "280px",
+      "hf1": "pb1131111"
+    },
+    "hb2": {
+      "width": "100px",
+      "height": "100px",
+      "top": "254px",
+      "left": "190px",
+      "hf2": "pb1131112"
+    },
+    "hb3": {
+      "width": "103px",
+      "height": "170px",
+      "top": "244px",
+      "left": "620px",
+      "hf3": "pb1131113"
+    }
+  },
+  "pb2": {
+    "p": "Du bist erfroren, weil das Wasser unter der Erde zu kalt ist.",
+    "b1": "Versuchen Sie es erneut!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "11132132",
+    "ach": "Matrose"
+  },
+  "pb1131111": {
+    "p": "Sie gingen die Treppe hinunter und befanden sich in den Technikräumen der Lebenserhaltungssysteme.",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11311111",
+    "f2": "",
+    "f3": "",
+    "bg": "b1131111",
+    "get": {
+      "name": "Dragonair",
+      "bg": "10",
+      "width": 40,
+      "height": 40,
+      "top": 210,
+      "left": 418
+    }
+  },
+  "pb11311111": {
+    "p": "Sie haben Ihren Weg fortgesetzt und dabei Hindernissen ausgewichen ... Wählen Sie, wohin Sie als Nächstes gehen möchten.",
+    "b1": "Betrete den Raum",
+    "b2": "Gehen Sie als nächstes",
+    "b3": "",
+    "f1": "pb113111111",
+    "f2": "pb113111112",
+    "f3": "",
+    "bg": "b11311111"
+  },
+  "pb113111111": {
+    "p": "Sie befanden sich in einem Arbeiterzimmer mit vielen Werkzeugen. ",
+    "b1": "Verlasse den Raum",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11311111",
+    "f2": "",
+    "f3": "",
+    "bg": "b113111111",
+    "get": {
+      "name": "Bolzenschneider",
+      "bg": "Bolzenschneider",
+      "width": 140,
+      "height": 140,
+      "top": 60,
+      "left": 440
+    }
+  },
+  "pb113111112": {
+    "p": "Sie haben die Treppe nach oben gefunden. ",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "pb1131111121",
+    "f2": "",
+    "f3": "",
+    "bg": "b113111112"
+  },
+  "pb1131111121": {
+    "p": "Sie sind in den 2. Stock geklettert.",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11311111211",
+    "f2": "",
+    "f3": "",
+    "bg": "b1131111121"
+  },
+  "pb11311111211": {
+    "p": "Du bist zum Umspannwerk gegangen. ",
+    "b1": "Versuchen Sie, die Tür zur Kommandozentrale aufzubrechen",
+    "b2": "Gehen Sie zurück zum Hauptblock",
+    "b3": "",
+    "f1": "pb113111112111",
+    "f2": "pb113111",
+    "f3": "",
+    "bg": "b11311111211",
+    "get": {
+      "name": "Piplup",
+      "bg": "11",
+      "width": 30,
+      "height": 37,
+      "top": 128,
+      "left": 198
+    }
+  },
+  "pb1131112": {
+    "p": "Sie haben beschlossen, den seltsamen Durchgang auf der linken Seite zu erkunden, und haben die Tür mit einem Vorhängeschloss gefunden, wahrscheinlich zur Kommandozentrale. ",
+    "b1": "Versuchen Sie es zu bremsen",
+    "b1if": "Bolzenschneider",
+    "b1error": "Es scheint, dass es nicht möglich ist, diese Tür ohne Werkzeug aufzubrechen ... Vielleicht sollten Sie versuchen, welche zu finden!",
+    "b2": "Geh zurück",
+    "b3": "",
+    "f1": "pb11311121",
+    "f2": "pb113111",
+    "f3": "",
+    "bg": "b1131112"
+  },
+  "pb113111112111": {
+    "p": "Während Sie versuchten, die Tür zu öffnen, wurden Sie von den Bunkerarbeitern entdeckt und erwischt. ",
+    "b1": "Versuchen Sie es erneut!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "pb11311121": {
+    "p": "Sie haben den Kommandozentralenteil des Bunkers betreten.",
+    "b1": "Besuchen Sie das Telefon- und Telegrafenzentrum",
+    "b1if": "TelefonTürGeöffnet",
+    "b1error": "Sieht so aus, als wäre diese Tür von innen geschlossen ...",
+    "b2": "Schauen Sie sich den Kraftwerksraum an",
+    "b3": "Gehen Sie zurück zur U-Bahn-Linie",
+    "f1": "pb113111211",
+    "f2": "pb113111212",
+    "f3": "p121111",
+    "bg": "b11311121"
+  },
+  "pb113111212": {
+    "p": "Sie haben diese beiden V12-Dieselmotoren untersucht – das Herzstück dieses Bunkers … Wohin als nächstes?",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "pb113111211",
+    "f2": "pb11311121",
+    "f3": "",
+    "bg": "b113111212",
+    "get": {
+      "name": "Glumanda",
+      "bg": "5",
+      "width": 30,
+      "height": 37,
+      "top": 151,
+      "left": 398
+    },
+    "hb1": {
+      "width": "100px",
+      "height": "300px",
+      "top": "190px",
+      "left": "0px",
+      "hf1": "pb113111211"
+    },
+    "hb2": {
+      "width": "140px",
+      "height": "250px",
+      "top": "254px",
+      "left": "650px",
+      "hf2": "pb11311121"
+    }
+  },
+  "pb113111211": {
+    "p": "Sie haben es geschafft, durch die Stromkabel in den Raum mit der Kommunikationsausrüstung zu kriechen.",
+    "b1": "Rufen Sie jemanden an",
+    "b2": "Schauen Sie sich alte Fernschreiber an",
+    "b3": "",
+    "f1": "pb1131112111",
+    "f2": "pb1131112112",
+    "f3": "",
+    "bg": "b113111211",
+    "get": {
+      "name": "Eichhörnchen",
+      "bg": "3",
+      "width": 30,
+      "height": 27,
+      "top": 291,
+      "left": 338
+    }
+  },
+  "pb1131112111": {
+    "p": "Sie fühlten sich einsam und beschlossen, mit jemandem zu sprechen. ",
+    "b1": "Ruf deinen Freund an",
+    "b1if": "Nichts",
+    "b1error": "Er antwortete nicht, weil normale Menschen nachts schlafen",
+    "b2": "Anruf beim Präsidenten",
+    "b3": "Geh zurück",
+    "f1": "add_friendCall",
+    "f2": "pb11311121111",
+    "f3": "pb113111211",
+    "bg": "b1131112111"
+  },
+  "pb11311121111": {
+    "p": "Sie haben den Präsidenten über die gesicherte Staatsgrenze erreicht, aber am anderen Ende der Leitung hat man Ihren Streich nicht gewürdigt und entsprechende Maßnahmen ergriffen. ",
+    "b1": "Versuchen Sie es erneut! ",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "pb113111211",
+    "bg": "pb11311121111"
+  },
+  "pb1131112112": {
+    "p": "Sie befinden sich in einem Raum mit alten Telegrafen. ",
+    "b1": "Hinterlassen Sie Ihr Instagram für zukünftige Besucher",
+    "b2": "Schreibe ein Schimpfwort",
+    "b3": "Gehe zurück in den Hauptraum",
+    "f1": "add_insta",
+    "f2": "add_world",
+    "f3": "pb11311121",
+    "bg": "b1131112112"
+  },
+  "pb1131113": {
+    "p": "Du hast dich entschieden, richtig zu gehen...",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11311131",
+    "f2": "",
+    "f3": "",
+    "bg": "b1131113"
+  },
+  "pb11311131": {
+    "p": "Sie gingen durch mehrere hermetische Türen und befanden sich in einem Raum mit einem vertikalen Lüftungstunnel. ",
+    "b1": "Klettere an die Oberfläche",
+    "b2": "Gehen Sie zu den U-Bahn-Tunneln",
+    "b3": "Gehe zurück in den Hauptraum",
+    "f1": "p777",
+    "f2": "p121111",
+    "f3": "pb113111",
+    "bg": "b11311131",
+    "get": {
+      "name": "Zubat",
+      "bg": "15",
+      "width": 40,
+      "height": 40,
+      "top": 20,
+      "left": 488
+    }
+  },
+  "p21": {
+    "p": "Sie rannten so schnell Sie konnten und wichen vorbeifahrenden Zügen in technischen Löchern des Tunnels aus.",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "S. 215",
+    "f2": "",
+    "f3": "",
+    "bg": "21"
+  },
+  "p215": {
+    "p": "Du bist ziemlich müde zum verlassenen Bahnhof gekommen.",
+    "b1": "Machen Sie eine Pause auf der Plattform",
+    "b2": "Marathon fortsetzen",
+    "b3": "",
+    "f1": "S. 211",
+    "f2": "p1113213",
+    "f3": "",
+    "bg": "215",
+    "get": {
+      "name": "Bisasam",
+      "bg": "4",
+      "width": 35,
+      "height": 35,
+      "top": 160,
+      "left": 170
+    },
+    "hb3": {
+      "width": "110px",
+      "height": "180px",
+      "top": "200px",
+      "left": "20px",
+      "hf3": "pb2151"
+    }
+  },
+  "pb2151": {
+    "p": "Du hast einen Geheimgang gefunden!",
+    "b1": "Geh zurück",
+    "b2": "",
+    "b3": "",
+    "f1": "S. 211",
+    "f2": "",
+    "f3": "",
+    "bg": "b2151",
+    "hb3": {
+      "width": "200px",
+      "height": "200px",
+      "top": "240px",
+      "left": "400px",
+      "hf3": "pb21511"
+    }
+  },
+  "pb21511": {
+    "p": "Du hast ein geheimes Arsenal von Onkel Sam in einem verlassenen Bunker gefunden!",
+    "b1": "Geh zurück",
+    "b2": "",
+    "b3": "",
+    "f1": "S. 211",
+    "f2": "",
+    "f3": "",
+    "bg": "b21511",
+    "get": {
+      "altText": "Falsches Spiel!",
+      "name": "Du hast eine Mimigun gefunden 🔫",
+      "bg": "ee_minigun",
+      "width": 220,
+      "height": 60,
+      "top": 250,
+      "left": 270
+    }
+  },
+  "p211": {
+    "p": "Sie haben beschlossen, sich während der Vorbeifahrt des Zuges auf dem Bahnsteig zu entspannen. ",
+    "b1": "Nächste",
+    "b2": "Warten Sie, bis die Züge nicht mehr fahren",
+    "b3": "",
+    "f1": "p11131",
+    "f2": "S. 1211",
+    "f3": "",
+    "bg": "211"
+  },
+  "p1211231": {
+    "p": "Du bist an eine Weggabelung gekommen. ",
+    "b1": "Besuchen Sie den Servicetunnel",
+    "b2": "Setzen Sie Ihre Reise fort",
+    "b3": "",
+    "f1": "p12112311",
+    "f2": "p1211231112",
+    "f3": "",
+    "bg": "1211231"
+  },
+  "p12112311": {
+    "p": "Du hast einen einzigartigen Tunnelreinigungszug gefunden!",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "p121123111",
+    "f2": "",
+    "f3": "",
+    "bg": "12112311",
+    "get": {
+      "name": "Pikachu",
+      "bg": "1",
+      "width": 55,
+      "height": 55,
+      "top": 155,
+      "left": 180
+    }
+  },
+  "p121123111": {
+    "p": "Sie haben beschlossen, ein Foto vom Zug zu machen, aber die Arbeiter haben den Blitz Ihrer Kamera gesehen!",
+    "b1": "Versuchen Sie, sich im Zug vor ihnen zu verstecken",
+    "b2": "Versuche wegzulaufen",
+    "b3": "",
+    "f1": "p1211231111",
+    "f2": "p1211231112",
+    "f3": "",
+    "bg": "121123111"
+  },
+  "p1211231111": {
+    "p": "Die Arbeiter haben dich gefunden, weil es kaum Versteckmöglichkeiten gab. ",
+    "b1": "Versuchen Sie es erneut!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryAgain",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p1211231112": {
+    "p": "Du hast es geschafft, unbemerkt bis zur Tunnelbiegung zu gelangen ...",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "p12112311121",
+    "f2": "",
+    "f3": "",
+    "bg": "1211231112"
+  },
+  "p12112311121": {
+    "p": "Du bist an die große Explosionstür herangekommen. ",
+    "b1": "Beende deine Reise!",
+    "b2": "",
+    "b3": "",
+    "f1": "p777",
+    "f2": "",
+    "f3": "",
+    "bg": "12112311121",
+    "get": {
+      "name": "Miauen",
+      "bg": "6",
+      "width": 35,
+      "height": 55,
+      "top": 200,
+      "left": 180
+    }
+  },
+  "p1211111": {
+    "p": "Sie hörten Arbeiter auf der nächsten Station reden und beschlossen, zu den quadratischen Tunneln zurückzukehren.",
+    "b1": "Nächste",
+    "b2": "",
+    "b3": "",
+    "f1": "p1211231",
+    "f2": "",
+    "f3": "",
+    "bg": "1211111",
+    "get": {
+      "name": "Evoli",
+      "bg": "2",
+      "width": 35,
+      "height": 35,
+      "top": 275,
+      "left": 288
+    }
+  },
+  "p777": {
+    "p": "Sie haben die Handlung erfolgreich abgeschlossen!",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f": "",
+    "f2": "",
+    "f3": "",
+    "bg": "777"
+  }
+}

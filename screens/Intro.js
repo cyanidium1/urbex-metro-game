@@ -63,7 +63,7 @@ const Intro = () => {
             onPress={() => navigation.navigate("Game")}
           >
             <Text className="text-[#fcf6bd] text-base font-bold">
-              {lang === "en" ? "Next" : "Далее"}
+              {plot.buttons.next}
             </Text>
           </TouchableOpacity>
         </View>

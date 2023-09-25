@@ -29,6 +29,11 @@ import FindTheThing from "./Components/FindTheThing";
 import Toast from "react-native-toast-message";
 import { useNavigation } from "@react-navigation/native";
 
+// for ads
+// import { BannerAd, BannerAdSize } from "react-native-google-mobile-ads";
+
+// const adUnitId = "ca-app-pub-7466278964548443~1477731689";
+
 const Game = () => {
   // state
   const dispatch = useDispatch();
@@ -37,7 +42,6 @@ const Game = () => {
   const showMap = useSelector((state) => state.game.showMap);
   const frame = useSelector((state) => state.game.frame);
   const history = useSelector((state) => state.game.history);
-  const progress = useSelector((state) => state.game.progress);
   // local state
   const [cheats, showCheats] = useState(false);
   // notifs
@@ -87,8 +91,7 @@ const Game = () => {
     if (click.includes("add")) {
       if (!inv.includes(click)) {
         dispatch(updateInv([...inv, click]));
-        const msg =
-          lang === "en" ? "You leaved a message..." : "Вы оставили послание...";
+        const msg = plot.other.message;
         showToast(msg, "success");
         return;
       }
@@ -138,10 +141,7 @@ const Game = () => {
       showToast(scene.get.altText, "success", scene.get.name);
       return;
     }
-    const msg =
-      lang === "en"
-        ? `You found a ${scene.get.name}`
-        : `Вы нашли ${scene.get.name}`;
+    const msg = `${plot.other.youFound}${scene.get.name}`;
     showToast(msg, "success");
   }
 

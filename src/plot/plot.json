@@ -1,5 +1,36 @@
 {
-  "info": "This is a 'visual novel' type of game. The player is asked to choose different story options, search for items and make decisions that determine the plot and ending of the game. The photos used here were taken by the author of the project in 2016-2018 in the Kyiv metro. Events are based on real stories. Enjoy the game!",
+  "buttons": {
+    "play": "Play",
+    "about": "About",
+    "settings": "Settings",
+    "items": "Items",
+    "next": "Next",
+    "undo": "Undo",
+    "map": "Map",
+    "menu": "Menu",
+    "gameLang": "Game language: ",
+    "plotMap": "Plot map: ",
+    "lang": "English",
+    "reset": "Reset game progress (including found things)",
+    "contact": "Contact",
+    "create": "Create!",
+    "newGame": "New game",
+    "tryAgain": "Try again!"
+  },
+  "other": {
+    "visited": "You visited",
+    "visited2": "of all locations!",
+    "items": "secret items of",
+    "youFound": "You found a ",
+    "found": "You found",
+    "of": "pockemons of",
+    "completed": "You complited the game 🎉",
+    "message": "You leaved a message..."
+  },
+  "info": "This is a 'visual novel' game. The player is asked to choose different plot options, look for objects and make decisions that determine the course, ending of the game and completion percentage. Many scenes require the player to tap on the screen to pick up an item (Pokémon, quest, or secret) or go to a specified area (even if this is not indicated in the scene description). For example, in the location of an abandoned station there is a secret passage. Enjoy the game!",
+  "about": "The photos used here were taken by the project's author in the Kiev metro from 2016 to 2018. The events are based on real stories. This project represents the author's first foray into mobile development. If the game receives a positive response, the author plans to create a more extensive project with animations, the use of 360 panoramas, and other more complex game mechanics. You can always leave feedback or suggestions to the author on Instagram or via email (see contacts).",
+  "contact": "You can contact the author through Instagram or email:",
+  "create": "You can create a similar project with minimal coding skills. This project was initially written as an engine (JS, React Native) for playing interactive stories in JSON format, allowing you to import any plot and compile the application for Android or iOS. So if you want to create your own application, feel free to contact the author (see contacts).",
   "intro": "    Since childhood you have been lured by the darkness of metro tunnels. Riding underground you have often noticed various branches in the tunnels. Spending hours in front of the computer you found a lot of information about the capital's underground and decided to move to the active phase of research - to climb inside these tunnels!",
   "p0": {
     "p": "You need to decide how to get into the tunnels. There are two main ways: through the ventilation shaft or through the \"portal\" (from the station).",

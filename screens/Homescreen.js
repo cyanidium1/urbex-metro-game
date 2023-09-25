@@ -4,18 +4,43 @@ import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  chLang,
-  setFrame,
-  toggleShowMap,
-  updateHistory,
-} from "../redux/gameSlice";
+import ploten from "../src/plot/plot.json";
+import plotru from "../src/plot/plotru.json";
+
+// import plotua from "../src/plot/plotua.json";
+// import plotde from "../src/plot/plotde.json";
+// import plotfr from "../src/plot/plotfr.json";
+// import plotes from "../src/plot/plotes.json";
 
 function Homescreen() {
-  const lang = useSelector((state) => state.game.lang);
   const history = useSelector((state) => state.game.history);
   const navigation = useNavigation();
   const dispatch = useDispatch();
+  const lang = useSelector((state) => state.game.lang);
+  // lang settings
+  let plot;
+  switch (lang) {
+    case "ru":
+      plot = plotru;
+      break;
+    // case "es":
+    //   plot = plotes;
+    //   break;
+    // case "de":
+    //   plot = plotde;
+    //   break;
+    // case "fr":
+    //   plot = plotfr;
+    //   break;
+    // case "ua":
+    //   plot = plotua;
+    //   break;
+    default:
+      plot = ploten;
+      break;
+  }
+  const { play, about, settings, items } = plot.buttons;
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground
@@ -31,29 +56,21 @@ function Homescreen() {
                 : navigation.navigate("Intro");
             }}
           >
-            <Text className="text-[#fcf6bd] text-xl font-bold">
-              {lang === "en" ? "Continue" : "Продолжить"}
-            </Text>
+            <Text className="text-[#fcf6bd] text-xl font-bold">{play}</Text>
           </TouchableOpacity>
           <TouchableOpacity
             className="bg-[#21252980] p-2 my-1 rounded items-center w-48"
             onPress={() => {
-              navigation.navigate("Intro");
-              dispatch(setFrame("p0"));
-              dispatch(updateHistory(["p0"]));
+              navigation.navigate("About");
             }}
           >
-            <Text className="text-[#fcf6bd] text-xl font-bold">
-              {lang === "en" ? "New game" : "Новая игра"}
-            </Text>
+            <Text className="text-[#fcf6bd] text-xl font-bold">{about}</Text>
           </TouchableOpacity>
           <TouchableOpacity
             className="bg-[#21252980] p-2 my-1 rounded items-center w-48"
             onPress={() => navigation.navigate("Settings")}
           >
-            <Text className="text-[#fcf6bd] text-xl font-bold">
-              {lang === "en" ? "Settings" : "Настройки"}
-            </Text>
+            <Text className="text-[#fcf6bd] text-xl font-bold">{settings}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -65,9 +82,7 @@ function Homescreen() {
               })
             }
           >
-            <Text className="text-[#fcf6bd] text-xl font-bold">
-              {lang === "en" ? "Items" : "Предметы"}
-            </Text>
+            <Text className="text-[#fcf6bd] text-xl font-bold">{items}</Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>

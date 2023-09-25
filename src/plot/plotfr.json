@@ -1,0 +1,1019 @@
+{
+  "buttons": {
+    "play": "Jouer",
+    "about": "À propos",
+    "settings": "Paramètres",
+    "items": "Articles",
+    "next": "Suivant",
+    "undo": "annuler",
+    "map": "Carte",
+    "menu": "Menu",
+    "gameLang": "Langue du jeu : ",
+    "plotMap": "Carte du terrain : ",
+    "lang": "Anglais",
+    "reset": "Réinitialiser la progression du jeu (y compris les objets trouvés)",
+    "contact": "Contact",
+    "create": "Créer!",
+    "newGame": "Nouveau jeu",
+    "tryAgain": "Essayer à nouveau!"
+  },
+  "other": {
+    "visited": "Tu as visité",
+    "visited2": "de tous les endroits !",
+    "items": "objets secrets de",
+    "youFound": "Vous avez trouvé un ",
+    "found": "Tu as trouvé",
+    "of": "des pokémons de",
+    "completed": "Vous avez terminé le jeu 🎉",
+    "message": "Vous avez laissé un message..."
+  },
+  "info": "Il s'agit d'un jeu de type 'visual novel'. Le joueur est invité à choisir différentes options de scénario, à chercher des objets et à prendre des décisions qui déterminent le déroulement, la fin du jeu et le pourcentage de réalisation. De nombreuses scènes demandent au joueur de toucher l'écran pour ramasser un objet (Pokémon, quête ou secret) ou se rendre dans une zone spécifiée (même si cela n'est pas indiqué dans la description de la scène). Par exemple, sur le lieu d'une station abandonnée, il y a un passage secret. Amusez-vous bien en jouant !",
+  "about": "Les photos utilisées ici ont été prises par l'auteur du projet dans le métro de Kiev de 2016 à 2018. Les événements sont basés sur des histoires réelles. Ce projet représente la première incursion de l'auteur dans le développement mobile. Si le jeu reçoit une réponse positive, l'auteur prévoit de créer un projet plus étendu avec des animations, l'utilisation de panoramas à 360 degrés et d'autres mécanismes de jeu plus complexes. Vous pouvez toujours laisser des commentaires ou des suggestions à l'auteur sur Instagram ou par e-mail (voir les contacts).",
+  "contact": "Vous pouvez contacter l'auteur via Instagram ou par e-mail :",
+  "create": "Vous pouvez créer un projet similaire avec des compétences de codage minimales. Ce projet a été initialement écrit comme un moteur (JS, React Native) pour jouer à des histoires interactives au format JSON, vous permettant d'importer n'importe quel scénario et de compiler l'application pour Android ou iOS. Donc, si vous souhaitez créer votre propre application, n'hésitez pas à contacter l'auteur (voir les contacts).",
+  "intro": "Depuis votre enfance, vous avez été attiré par l'obscurité des tunnels du métro. En voyageant sous terre, vous avez souvent remarqué diverses branches dans les tunnels. Passant des heures devant l'ordinateur, vous avez trouvé de nombreuses informations sur le métro de la capitale et avez décidé de passer à la phase active de la recherche : vous aventurer à l'intérieur de ces tunnels !",
+  "p0": {
+    "p": "Vous devez décider comment entrer dans les tunnels. ",
+    "b1": "Essayez-le via la ventilation",
+    "b2": "Essayez-le depuis la gare",
+    "b3": "",
+    "f1": "p1",
+    "f2": "p2",
+    "f3": "",
+    "bg": "0"
+  },
+  "p1": {
+    "p": "Vous avez décidé de grimper par un puits de ventilation. ",
+    "bg": "1",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "p11",
+    "f2": "p12",
+    "f3": "",
+    "hb1": {
+      "width": "60px",
+      "height": "114px",
+      "top": "366px",
+      "left": "357px",
+      "hf1": "p11"
+    },
+    "hb2": {
+      "width": "313px",
+      "height": "124px",
+      "top": "214px",
+      "left": "257px",
+      "hf2": "p12"
+    }
+  },
+  "p11": {
+    "p": "Vous avez cassé la serrure de la porte et êtes entré. ",
+    "b1": "Commencer la descente",
+    "b2": "Attendez 30 minutes à proximité de la gaine de ventilation par mesure de prudence",
+    "b3": "",
+    "f1": "p111",
+    "f2": "p112",
+    "f3": "",
+    "bg": "11"
+  },
+  "p111": {
+    "p": "Vous avez négligé la prudence et avez commencé à descendre le puits vertical vers le bas. ",
+    "b1": "Retourne à l'étage",
+    "b2": "Accélérez et essayez de vous échapper",
+    "b3": "",
+    "f1": "p1111",
+    "f2": "p1112",
+    "f3": "",
+    "bg": "111"
+  },
+  "p1111": {
+    "p": "Vous êtes monté à l'étage. ",
+    "b1": "Essayer à nouveau!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p112": {
+    "p": "Vous avez été stressé par le feu rouge clignotant car cela ressemblait beaucoup à une alarme. ",
+    "b1": "Essayer à nouveau!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "112"
+  },
+  "p1112": {
+    "p": "Vous avez descendu les marches restantes dans le tunnel d'approche jusqu'aux voies contournant les immenses portes.",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "p1113",
+    "f2": "",
+    "f3": "",
+    "bg": "1112",
+    "get": {
+      "name": "Ombreon",
+      "bg": "8",
+      "width": 65,
+      "height": 55,
+      "top": 180,
+      "left": 560
+    }
+  },
+  "p1113": {
+    "p": "En contournant les ventilateurs, vous êtes sorti dans la voie. ",
+    "b1": "Longez les voies ferrées en direction de la gare dont on aperçoit les lumières au loin.",
+    "b2": "Courir dans la direction opposée à la gare",
+    "b3": "",
+    "f1": "p11131",
+    "f2": "p1113213",
+    "f3": "",
+    "bg": "1113"
+  },
+  "p11131": {
+    "p": "Vous avez couru jusqu'à la gare. ",
+    "b1": "Essayez de monter sur la plate-forme",
+    "b2": "Entrez dans le tunnel de service",
+    "b3": "Cachez-vous derrière le guichet et attendez que le train arrive à la gare",
+    "f1": "p111311",
+    "f2": "p11132",
+    "f3": "p11133",
+    "bg": "11131",
+    "get": {
+      "name": "Miaouss",
+      "bg": "7",
+      "width": 45,
+      "height": 55,
+      "top": 100,
+      "left": 645
+    }
+  },
+  "p111311": {
+    "p": "Sous les regards surpris des passagers, vous êtes sorti dans la gare. ",
+    "b1": "Essayer à nouveau!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p11133": {
+    "p": "Vous avez attendu qu'un train arrive en gare et lorsque la foule a commencé, vous avez soigneusement ouvert la porte de l'intérieur, êtes entré dans le train et avez réussi à vous échapper. ",
+    "b1": "Terminez votre voyage !",
+    "b2": "",
+    "b3": "",
+    "f1": "p777",
+    "f2": "",
+    "f3": "",
+    "bg": "11133"
+  },
+  "p11132": {
+    "p": "Vous êtes monté dans la salle de maintenance et êtes sorti sur le balcon au-dessus des voies ferrées. ",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "p111321",
+    "f2": "",
+    "f3": "",
+    "bg": "11132",
+    "get": {
+      "name": "Jigglypuff",
+      "bg": "12",
+      "width": 35,
+      "height": 35,
+      "top": 260,
+      "left": 220
+    }
+  },
+  "p111321": {
+    "p": "Après avoir observé le passage des trains, vous redescendez sur les voies. ",
+    "b1": "Essayez de vous faufiler jusqu'à la gare",
+    "b2": "",
+    "b3": "Courez jusqu'à la prochaine gare sur la voie ferrée venant en sens inverse",
+    "f1": "p111311",
+    "f2": "",
+    "f3": "p1113213",
+    "bg": "111321"
+  },
+  "p1113212": {
+    "p": "Vous avez continué. ",
+    "b1": "Essayer à nouveau!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "1113212"
+  },
+  "p1113213": {
+    "p": "Vous avez couru dans le sens de la circulation venant en sens inverse. ",
+    "b1": "Éclairez une lampe de poche sur le conducteur pour qu'il puisse vous voir et arrêter le train",
+    "b2": "Essayez de vous accrocher aux fils sur la paroi du tunnel",
+    "b3": "Fuyez le train",
+    "f1": "p11132131",
+    "f2": "p11132132",
+    "f3": "p11132133",
+    "bg": "1113213"
+  },
+  "p11132133": {
+    "p": "Curieusement, le train s'avère plus rapide qu'un homme qui court, mais à cause de la montée d'adrénaline frénétique, vous vous êtes tourné vers ce foutu Usain Bolt et avez miraculeusement réussi à courir et à vous cacher dans le trou dans la paroi du tunnel.",
+    "b1": "Explorez cet étrange passage",
+    "b2": "Retournez à la gare",
+    "b3": "",
+    "f1": "p111321331",
+    "f2": "p111321332",
+    "f3": "",
+    "bg": "11132133"
+  },
+  "p111321332": {
+    "p": "Lorsque le conducteur du train a signalé des intrus dans le tunnel de la gare, vous avez déjà été accueilli par la police et la garde nationale. ",
+    "b1": "Essayer à nouveau!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p11132131": {
+    "p": "Vous avez braqué votre lampe de poche en direction du train. ",
+    "b1": "Essayer à nouveau!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p11132132": {
+    "p": "Vous n'avez pas calculé le fait que le train est équipé d'énormes rétroviseurs latéraux, qui vous font tomber des câbles et vous dispersent sur la voie.",
+    "b1": "Réapparaître ?",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "11132132"
+  },
+  "p111321331": {
+    "p": "Vous avez trouvé une entrée vers le bunker ! ",
+    "b1": "Essayez de nager",
+    "b2": "Essayez de rechercher d'autres variantes",
+    "b3": "",
+    "f1": "pb2",
+    "f2": "pb1",
+    "f3": "",
+    "bg": "111321331",
+    "get": {
+      "name": "Vaporéon",
+      "bg": "13",
+      "width": 30,
+      "height": 25,
+      "top": 210,
+      "left": 420
+    }
+  },
+  "p12": {
+    "p": "Vous avez réussi à plier la grille et à ramper dans le tunnel du métro, mais vous avez passé beaucoup de temps à agrandir le trou et à y pénétrer. Il y avait un gouffre béant de plusieurs dizaines de mètres sous vos pieds. ",
+    "b1": "Commencez la descente !",
+    "b2": "",
+    "b3": "",
+    "f1": "p121",
+    "f2": "",
+    "f3": "",
+    "bg": "11"
+  },
+  "p121": {
+    "p": "Vous avez marché tranquillement dans le tunnel et examiné les énormes portes et bouches d'aération scellées en métal. ",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "p1211",
+    "f2": "",
+    "f3": "",
+    "bg": "1112"
+  },
+  "p1211": {
+    "p": "Vous êtes entré dans le tunnel tard dans la nuit.  ",
+    "b1": "Marchez à droite vers les anciens tunnels profonds",
+    "b2": "Allez à gauche vers les nouveaux tunnels carrés",
+    "b3": "",
+    "f1": "p12111",
+    "f2": "p12112",
+    "f3": "",
+    "bg": "1211"
+  },
+  "p12111": {
+    "p": "Sur votre chemin vous avez remarqué un passage disgracieux perpendiculaire au tunnel principal....",
+    "b1": "Explorez-le",
+    "b2": "Sautez-le et continuez à marcher",
+    "b3": "",
+    "f1": "p111321331",
+    "f2": "p121111",
+    "f3": "",
+    "bg": "12111"
+  },
+  "p121111": {
+    "p": "Vous avez traversé des tunnels et rencontré un train à l'arrêt sur votre chemin !",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "p1211111",
+    "f2": "",
+    "f3": "",
+    "bg": "121111",
+    "get": {
+      "altText": "Il ne nous restait plus qu'à suivre ce foutu train !",
+      "name": "Échouer la mission de CJ 🚇",
+      "bg": "ee_cjey",
+      "width": 100,
+      "height": 100,
+      "top": 190,
+      "left": 400
+    }
+  },
+  "p12112": {
+    "p": "Vous avez décidé de vous diriger vers les nouveaux tunnels carrés.  ",
+    "b1": "Approchez-vous d'elle et faites semblant d'être un ouvrier",
+    "b2": "Commence à fonctionner",
+    "b3": "Faites comme si vous n'aviez pas entendu l'appel et passez à autre chose",
+    "f1": "p121121",
+    "f2": "p121122",
+    "f3": "p121123",
+    "bg": "12112"
+  },
+  "p121121": {
+    "p": "Le déguisement a échoué parce que vous n'aviez pas de gilet ni de pièce d'identité. ",
+    "b1": "Essayer à nouveau",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p121122": {
+    "p": "Vous avez réussi à vous échapper, mais au poste suivant, la police vous attendait déjà. ",
+    "b1": "Essayer à nouveau",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p121123": {
+    "p": "Vous avez eu de la chance et l'employé n'a pas donné l'alarme. ",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "p1211231",
+    "f2": "",
+    "f3": "",
+    "bg": "121123"
+  },
+  "p2": {
+    "p": "Vous avez décidé d'aller jeter le portail.",
+    "b1": "Courir!",
+    "b2": "",
+    "b3": "",
+    "f1": "p21",
+    "f2": "",
+    "f3": "",
+    "bg": "2"
+  },
+  "pb1": {
+    "p": "Vous avez trouvé une petite pièce qui s'est avérée être une station de pompage. ",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11",
+    "f2": "",
+    "f3": "",
+    "bg": "b1",
+    "hb1": {
+      "width": "80px",
+      "height": "80px",
+      "top": "273px",
+      "left": "570px",
+      "hf1": "pb11"
+    }
+  },
+  "pb11": {
+    "p": "Les pompes fonctionnaient fort. ",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "",
+    "f2": "",
+    "f3": "",
+    "bg": "b11",
+    "hb1": {
+      "width": "114px",
+      "height": "173px",
+      "top": "321px",
+      "left": "129px",
+      "hf1": "pb114"
+    },
+    "hb2": {
+      "width": "170px",
+      "height": "198px",
+      "top": "197px",
+      "left": "246px",
+      "hf2": "pb113"
+    },
+    "hb3": {
+      "width": "89px",
+      "height": "209px",
+      "top": "298px",
+      "left": "706px",
+      "hf3": "pb115"
+    },
+    "get": {
+      "altText": "Ne le fais pas sur mon visage !",
+      "name": "Vous avez attrapé un crabe 🦀",
+      "bg": "ee_headcrab",
+      "width": 25,
+      "height": 25,
+      "top": 175,
+      "left": 430
+    }
+  },
+  "pb113": {
+    "p": "Vous vous êtes souvenu de ce qu'on vous a appris dans le jeu Half-Life et avez grimpé par la ventilation, après quoi vous vous êtes retrouvé dans la salle de ventilation par filtre. ",
+    "b1": "Continuer",
+    "b2": "",
+    "b3": "",
+    "f1": "pb1131",
+    "f2": "",
+    "f3": "",
+    "bg": "b113",
+    "get": {
+      "name": "Chenille",
+      "bg": "9",
+      "width": 30,
+      "height": 30,
+      "top": 110,
+      "left": 308
+    }
+  },
+  "pb114": {
+    "p": "Vous êtes entré dans la salle des filtres. ",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "",
+    "f2": "",
+    "f3": "",
+    "bg": "b114",
+    "hb1": {
+      "width": "70px",
+      "height": "90px",
+      "top": "283px",
+      "left": "488px",
+      "hf1": "pb1141"
+    },
+    "hb2": {
+      "width": "154px",
+      "height": "203px",
+      "top": "283px",
+      "left": "10px",
+      "hf2": "pb1142"
+    },
+    "hb3": {
+      "width": "240px",
+      "height": "348px",
+      "top": "163px",
+      "left": "207px",
+      "hf3": "pb1143"
+    }
+  },
+  "pb115": {
+    "p": "Vous avez décidé de faire demi-tour.  ",
+    "b1": "Essayer à nouveau!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "pb1143": {
+    "p": "Vous avez décidé de vous cacher derrière les tonneaux. ",
+    "b1": "Continuer",
+    "b2": "",
+    "b3": "",
+    "f1": "pb1131",
+    "f2": "",
+    "f3": "",
+    "bg": "b1143"
+  },
+  "pb1141": {
+    "p": "Vous avez décidé de poursuivre l'exploration. ",
+    "b1": "Essayer à nouveau!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "pb1142": {
+    "p": "Sans y réfléchir à deux fois, vous avez sauté dans un passage sombre. ",
+    "b1": "Continuer",
+    "b2": "",
+    "b3": "",
+    "f1": "p1211",
+    "f2": "",
+    "f3": "",
+    "bg": "b1142"
+  },
+  "pb1131": {
+    "p": "Vous êtes entré dans le bloc principal du bunker.",
+    "b1": "Continuer",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11311",
+    "f2": "",
+    "f3": "",
+    "bg": "b1131"
+  },
+  "pb11311": {
+    "p": "Vous avez commencé à marcher dans les labyrinthes de tunnels...",
+    "b1": "Continuer",
+    "b2": "",
+    "b3": "",
+    "f1": "pb113111",
+    "f2": "",
+    "f3": "",
+    "bg": "b11311",
+    "get": {
+      "name": "Diglett",
+      "bg": "14",
+      "width": 40,
+      "height": 40,
+      "top": 275,
+      "left": 648
+    }
+  },
+  "pb113111": {
+    "p": "Vous êtes arrivé au bloc principal. ",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "",
+    "f2": "",
+    "f3": "",
+    "bg": "b113111",
+    "hb1": {
+      "width": "320px",
+      "height": "134px",
+      "top": "410px",
+      "left": "280px",
+      "hf1": "pb1131111"
+    },
+    "hb2": {
+      "width": "100px",
+      "height": "100px",
+      "top": "254px",
+      "left": "190px",
+      "hf2": "pb1131112"
+    },
+    "hb3": {
+      "width": "103px",
+      "height": "170px",
+      "top": "244px",
+      "left": "620px",
+      "hf3": "pb1131113"
+    }
+  },
+  "pb2": {
+    "p": "Vous êtes mort de froid parce que l’eau souterraine est trop froide.",
+    "b1": "Essayer à nouveau!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "11132132",
+    "ach": "Marin"
+  },
+  "pb1131111": {
+    "p": "Vous avez descendu les escaliers et vous êtes retrouvé dans les locaux techniques des systèmes de survie.",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11311111",
+    "f2": "",
+    "f3": "",
+    "bg": "b1131111",
+    "get": {
+      "name": "Dragonair",
+      "bg": "dix",
+      "width": 40,
+      "height": 40,
+      "top": 210,
+      "left": 418
+    }
+  },
+  "pb11311111": {
+    "p": "Vous avez continué votre chemin en évitant les obstacles en cours de route... Choisissez où vous déplacer ensuite.",
+    "b1": "Entrez dans la pièce",
+    "b2": "Allez ensuite",
+    "b3": "",
+    "f1": "pb113111111",
+    "f2": "pb113111112",
+    "f3": "",
+    "bg": "b11311111"
+  },
+  "pb113111111": {
+    "p": "Vous vous êtes retrouvé dans une salle d'ouvriers avec de nombreux outils. ",
+    "b1": "Sortez de la pièce",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11311111",
+    "f2": "",
+    "f3": "",
+    "bg": "b113111111",
+    "get": {
+      "name": "Coupe-boulons",
+      "bg": "Coupe-boulons",
+      "width": 140,
+      "height": 140,
+      "top": 60,
+      "left": 440
+    }
+  },
+  "pb113111112": {
+    "p": "Vous avez trouvé les escaliers menant au sommet. ",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "pb1131111121",
+    "f2": "",
+    "f3": "",
+    "bg": "b113111112"
+  },
+  "pb1131111121": {
+    "p": "Vous êtes monté au 2ème étage.",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11311111211",
+    "f2": "",
+    "f3": "",
+    "bg": "b1131111121"
+  },
+  "pb11311111211": {
+    "p": "Vous êtes allé au poste de transformation. ",
+    "b1": "Essayez de casser la porte du centre de commandement",
+    "b2": "Retournez au bloc principal",
+    "b3": "",
+    "f1": "pb113111112111",
+    "f2": "pb113111",
+    "f3": "",
+    "bg": "b11311111211",
+    "get": {
+      "name": "Tiplouf",
+      "bg": "11",
+      "width": 30,
+      "height": 37,
+      "top": 128,
+      "left": 198
+    }
+  },
+  "pb1131112": {
+    "p": "Vous avez décidé d'explorer l'étrange passage à gauche et avez trouvé la porte avec un cadenas, probablement vers le centre de commandement. ",
+    "b1": "Essayez de le freiner",
+    "b1if": "Coupe-boulons",
+    "b1error": "Il semblerait qu'il ne soit pas possible de freiner cette porte sans outils... Peut-être devriez-vous essayer d'en trouver !",
+    "b2": "Retourner",
+    "b3": "",
+    "f1": "pb11311121",
+    "f2": "pb113111",
+    "f3": "",
+    "bg": "b1131112"
+  },
+  "pb113111112111": {
+    "p": "Pendant que vous essayiez d'ouvrir la porte, les ouvriers du bunker vous ont découvert et vous ont attrapé. ",
+    "b1": "Essayer à nouveau!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "pb11311121": {
+    "p": "Vous êtes entré dans la partie centre de commandement du bunker.",
+    "b1": "Allez voir le centre téléphonique et télégraphique",
+    "b1if": "téléphonePorteOuvert",
+    "b1error": "On dirait que cette porte est fermée de l'intérieur...",
+    "b2": "Allez voir la salle de la centrale électrique",
+    "b3": "Retournez à la ligne de métro",
+    "f1": "pb113111211",
+    "f2": "pb113111212",
+    "f3": "p121111",
+    "bg": "b11311121"
+  },
+  "pb113111212": {
+    "p": "Vous avez examiné ces deux moteurs diesel V12, le cœur de ce bunker... Où aller ensuite ?",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f1": "pb113111211",
+    "f2": "pb11311121",
+    "f3": "",
+    "bg": "b113111212",
+    "get": {
+      "name": "Salamèche",
+      "bg": "5",
+      "width": 30,
+      "height": 37,
+      "top": 151,
+      "left": 398
+    },
+    "hb1": {
+      "width": "100px",
+      "height": "300px",
+      "top": "190px",
+      "left": "0px",
+      "hf1": "pb113111211"
+    },
+    "hb2": {
+      "width": "140px",
+      "height": "250px",
+      "top": "254px",
+      "left": "650px",
+      "hf2": "pb11311121"
+    }
+  },
+  "pb113111211": {
+    "p": "Vous avez réussi à ramper à travers les câbles électriques jusqu'à la pièce où se trouvent les équipements de communication.",
+    "b1": "Appeler quelqu'un",
+    "b2": "Allez voir les vieux télétypes",
+    "b3": "",
+    "f1": "pb1131112111",
+    "f2": "pb1131112112",
+    "f3": "",
+    "bg": "b113111211",
+    "get": {
+      "name": "Carapuce",
+      "bg": "3",
+      "width": 30,
+      "height": 27,
+      "top": 291,
+      "left": 338
+    }
+  },
+  "pb1131112111": {
+    "p": "Vous vous êtes senti seul et avez décidé de parler à quelqu'un. ",
+    "b1": "Appelle ton ami",
+    "b1if": "rien",
+    "b1error": "Il n'a pas répondu parce que les gens normaux dorment la nuit",
+    "b2": "Appel au président",
+    "b3": "Retourner",
+    "f1": "add_friendAppel",
+    "f2": "pb11311121111",
+    "f3": "pb113111211",
+    "bg": "b1131112111"
+  },
+  "pb11311121111": {
+    "p": "Vous avez atteint le président via une ligne d'État sécurisée, mais à l'autre bout de la ligne, ils n'ont pas apprécié votre farce et ont pris les mesures appropriées. ",
+    "b1": "Essayer à nouveau! ",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "pb113111211",
+    "bg": "pb11311121111"
+  },
+  "pb1131112112": {
+    "p": "Vous vous retrouvez dans une pièce avec de vieux télégraphes. ",
+    "b1": "Laissez votre Instagram aux futurs visiteurs",
+    "b2": "Écrivez un gros mot",
+    "b3": "Retournez à la pièce principale",
+    "f1": "add_insta",
+    "f2": "add_world",
+    "f3": "pb11311121",
+    "bg": "b1131112112"
+  },
+  "pb1131113": {
+    "p": "Vous avez décidé d'aller à droite...",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "pb11311131",
+    "f2": "",
+    "f3": "",
+    "bg": "b1131113"
+  },
+  "pb11311131": {
+    "p": "Vous avez franchi plusieurs portes hermétiques et vous êtes retrouvé dans une pièce dotée d'un tunnel de ventilation vertical. ",
+    "b1": "Grimper à la surface",
+    "b2": "Allez dans les tunnels du métro",
+    "b3": "Retournez à la pièce principale",
+    "f1": "p777",
+    "f2": "p121111",
+    "f3": "pb113111",
+    "bg": "b11311131",
+    "get": {
+      "name": "Zoubat",
+      "bg": "15",
+      "width": 40,
+      "height": 40,
+      "top": 20,
+      "left": 488
+    }
+  },
+  "p21": {
+    "p": "Vous avez couru aussi vite que possible en évitant les trains qui passaient dans les trous techniques du tunnel.",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "p215",
+    "f2": "",
+    "f3": "",
+    "bg": "21"
+  },
+  "p215": {
+    "p": "Vous êtes arrivé à la gare abandonnée, assez fatigué.",
+    "b1": "Reposez-vous sur la plateforme",
+    "b2": "Continuer le marathon",
+    "b3": "",
+    "f1": "p211",
+    "f2": "p1113213",
+    "f3": "",
+    "bg": "215",
+    "get": {
+      "name": "Bulbizarre",
+      "bg": "4",
+      "width": 35,
+      "height": 35,
+      "top": 160,
+      "left": 170
+    },
+    "hb3": {
+      "width": "110px",
+      "height": "180px",
+      "top": "200px",
+      "left": "20px",
+      "hf3": "pb2151"
+    }
+  },
+  "pb2151": {
+    "p": "Vous avez trouvé un passage secret !",
+    "b1": "Retourner",
+    "b2": "",
+    "b3": "",
+    "f1": "p211",
+    "f2": "",
+    "f3": "",
+    "bg": "b2151",
+    "hb3": {
+      "width": "200px",
+      "height": "200px",
+      "top": "240px",
+      "left": "400px",
+      "hf3": "pb21511"
+    }
+  },
+  "pb21511": {
+    "p": "Vous avez trouvé l'arsenal secret de l'oncle Sam dans un bunker abandonné !",
+    "b1": "Retourner",
+    "b2": "",
+    "b3": "",
+    "f1": "p211",
+    "f2": "",
+    "f3": "",
+    "bg": "b21511",
+    "get": {
+      "altText": "Mauvais jeu !",
+      "name": "Vous avez trouvé un mimigun 🔫",
+      "bg": "ee_minigun",
+      "width": 220,
+      "height": 60,
+      "top": 250,
+      "left": 270
+    }
+  },
+  "p211": {
+    "p": "Vous avez décidé de vous détendre sur le quai pendant le passage du train. ",
+    "b1": "Suivant",
+    "b2": "Attendez que les trains s'arrêtent",
+    "b3": "",
+    "f1": "p11131",
+    "f2": "p1211",
+    "f3": "",
+    "bg": "211"
+  },
+  "p1211231": {
+    "p": "Vous êtes arrivé à une bifurcation sur la route. ",
+    "b1": "Visiter le tunnel de service",
+    "b2": "Continuez votre voyage",
+    "b3": "",
+    "f1": "p12112311",
+    "f2": "p1211231112",
+    "f3": "",
+    "bg": "1211231"
+  },
+  "p12112311": {
+    "p": "Vous avez trouvé un train de nettoyage de tunnels unique !",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "p121123111",
+    "f2": "",
+    "f3": "",
+    "bg": "12112311",
+    "get": {
+      "name": "Pikachu",
+      "bg": "1",
+      "width": 55,
+      "height": 55,
+      "top": 155,
+      "left": 180
+    }
+  },
+  "p121123111": {
+    "p": "Vous avez décidé de prendre une photo du train, mais les ouvriers ont vu le flash de votre appareil photo !",
+    "b1": "Essayez de vous cacher dans le train",
+    "b2": "Essayez de vous enfuir",
+    "b3": "",
+    "f1": "p1211231111",
+    "f2": "p1211231112",
+    "f3": "",
+    "bg": "121123111"
+  },
+  "p1211231111": {
+    "p": "Les ouvriers vous ont trouvé parce qu’il y avait peu d’endroits où se cacher. ",
+    "b1": "Essayer à nouveau!",
+    "b2": "",
+    "b3": "",
+    "f1": "ptryEncore",
+    "f2": "",
+    "f3": "",
+    "bg": "1111"
+  },
+  "p1211231112": {
+    "p": "Vous avez réussi à passer inaperçu au détour du tunnel...",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "p12112311121",
+    "f2": "",
+    "f3": "",
+    "bg": "1211231112"
+  },
+  "p12112311121": {
+    "p": "Vous êtes arrivé devant la grande porte anti-souffle. ",
+    "b1": "Terminez votre voyage !",
+    "b2": "",
+    "b3": "",
+    "f1": "p777",
+    "f2": "",
+    "f3": "",
+    "bg": "12112311121",
+    "get": {
+      "name": "Miauler",
+      "bg": "6",
+      "width": 35,
+      "height": 55,
+      "top": 200,
+      "left": 180
+    }
+  },
+  "p1211111": {
+    "p": "Vous avez entendu des ouvriers parler à la station suivante, vous avez donc décidé de retourner dans les tunnels carrés.",
+    "b1": "Suivant",
+    "b2": "",
+    "b3": "",
+    "f1": "p1211231",
+    "f2": "",
+    "f3": "",
+    "bg": "1211111",
+    "get": {
+      "name": "Évoli",
+      "bg": "2",
+      "width": 35,
+      "height": 35,
+      "top": 275,
+      "left": 288
+    }
+  },
+  "p777": {
+    "p": "Vous avez terminé l'intrigue avec succès !",
+    "b1": "",
+    "b2": "",
+    "b3": "",
+    "f": "",
+    "f2": "",
+    "f3": "",
+    "bg": "777"
+  }
+}

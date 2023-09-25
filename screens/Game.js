@@ -145,6 +145,8 @@ const Game = () => {
     showToast(msg, "success");
   }
 
+  console.log(inv);
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground source={images[frame]} className="cover flex-1">

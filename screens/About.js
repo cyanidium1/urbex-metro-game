@@ -61,7 +61,7 @@ const About = () => {
                 style={show === "about" ? { color: "red" } : null}
                 className="text-[#fcf6bd] text-xl font-bold bg-[#21252980] rounded text-center p-1"
               >
-                About
+                {plot.buttons.aboutabout}
               </Text>
             </TouchableOpacity>
 
@@ -74,7 +74,7 @@ const About = () => {
                 style={show === "contact" ? { color: "red" } : null}
                 className="text-[#fcf6bd] text-xl font-bold bg-[#21252980] rounded text-center p-1"
               >
-                Contact
+                {plot.buttons.contact}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -86,7 +86,7 @@ const About = () => {
                 style={show === "create" ? { color: "red" } : null}
                 className="text-[#fcf6bd] text-xl font-bold bg-[#21252980] rounded text-center p-1"
               >
-                Create!
+                {plot.buttons.create}
               </Text>
             </TouchableOpacity>
           </View>

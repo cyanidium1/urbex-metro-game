@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
+    "@react-native-async-storage/async-storage": "^1.19.3",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/stack": "^6.3.17",
     "@reduxjs/toolkit": "^1.9.5",

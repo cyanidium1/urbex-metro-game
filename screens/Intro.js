@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  ImageBackground,
-  StyleSheet,
-  SafeAreaView,
-} from "react-native";
-import ploten from "../src/plot/plot.json";
-import plotru from "../src/plot/plotru.json";
-import { useNavigation, useRoute } from "@react-navigation/core";
+import { View, Text, ImageBackground, SafeAreaView } from "react-native";
+import { useNavigation } from "@react-navigation/core";
 import { TouchableOpacity } from "react-native";
 import { useSelector } from "react-redux";
 import MenuButton from "./Components/MenuButton";
@@ -42,7 +34,7 @@ const Intro = () => {
   const navigation = useNavigation();
 
   const text = plot.intro;
-  const backgroundImage = require("../src/images/intro.jpg");
+  const backgroundImage = require("../src/videos/intro.gif");
 
   useEffect(() => {
     const typingInterval = setInterval(() => {

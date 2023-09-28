@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { useSelector } from "react-redux";
+import { Audio } from "expo-av";
 
 function Homescreen() {
   const history = useSelector((state) => state.game.history);
@@ -33,11 +34,40 @@ function Homescreen() {
   }
   const { play, about, settings, items } = plot.buttons;
 
+  // audio
+  const [audio, setAudio] = useState(new Audio.Sound()); // Initialize the audio sound object
+
+  const playIntroSound = async () => {
+    try {
+      // await audio.loadAsync(require("../src/sound/main.mp3")); // Load the sound file
+      await audio.playAsync(); // Play the audio
+    } catch (error) {
+      console.error("Error playing sound: ", error);
+    }
+  };
+
+  const stopIntroSound = async () => {
+    try {
+      await audio.stopAsync(); // Stop the audio
+    } catch (error) {
+      console.error("Error stopping sound: ", error);
+    }
+  };
+
+  useEffect(() => {
+    playIntroSound(); // Play the intro sound when the component mounts
+
+    return () => {
+      stopIntroSound(); // Stop the sound when the component unmounts
+    };
+  }, []);
+  //
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground
         className="bg-cover h-full w-full"
-        source={require("../src/images/main-1.jpg")}
+        source={require("../src/videos/main-1.gif")}
       >
         <View className="flex items-center mt-8">
           <TouchableOpacity

@@ -1,21 +1,24 @@
 {
   "buttons": {
     "play": "Jugar",
-    "about": "Acerca de",
-    "settings": "Ajustes",
-    "items": "Elementos",
-    "next": "Próximo",
+    "about": "Acerca de / FAQ",
+    "aboutabout": "Acerca de",
+    "settings": "Configuración",
+    "items": "Objetos",
+    "next": "Siguiente",
     "undo": "Deshacer",
     "map": "Mapa",
     "menu": "Menú",
     "gameLang": "Idioma del juego: ",
     "plotMap": "Mapa de la trama: ",
-    "lang": "Inglés",
-    "reset": "Restablecer el progreso del juego (incluidos los objetos encontrados)",
+    "shown": "mostrada",
+    "hidden": "oculta",
+    "lang": "Español",
+    "reset": "Restablecer progreso del juego (incluyendo objetos encontrados)",
     "contact": "Contacto",
     "create": "¡Crear!",
     "newGame": "Nuevo juego",
-    "tryAgain": "¡Intentar otra vez!"
+    "tryAgain": "Intentar de nuevo"
   },
   "other": {
     "visited": "Tu visitaste",

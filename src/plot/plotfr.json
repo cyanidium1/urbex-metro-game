@@ -1,21 +1,24 @@
 {
   "buttons": {
     "play": "Jouer",
-    "about": "À propos",
+    "about": "À propos / FAQ",
+    "aboutabout": "À propos",
     "settings": "Paramètres",
-    "items": "Articles",
+    "items": "Objets",
     "next": "Suivant",
-    "undo": "annuler",
+    "undo": "Annuler",
     "map": "Carte",
     "menu": "Menu",
-    "gameLang": "Langue du jeu : ",
-    "plotMap": "Carte du terrain : ",
-    "lang": "Anglais",
+    "gameLang": "Langue du jeu : ",
+    "plotMap": "Carte de l'intrigue : ",
+    "shown": "affichée",
+    "hidden": "cachée",
+    "lang": "Français",
     "reset": "Réinitialiser la progression du jeu (y compris les objets trouvés)",
     "contact": "Contact",
-    "create": "Créer!",
+    "create": "Créer !",
     "newGame": "Nouveau jeu",
-    "tryAgain": "Essayer à nouveau!"
+    "tryAgain": "Essayer à nouveau"
   },
   "other": {
     "visited": "Tu as visité",

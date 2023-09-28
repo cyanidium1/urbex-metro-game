@@ -2,6 +2,7 @@
   "buttons": {
     "play": "Spielen",
     "about": "Über das Spiel/FAQ",
+    "aboutabout": "Über das Spiel",
     "settings": "Einstellungen",
     "items": "Artikel",
     "next": "Nächste",
@@ -9,7 +10,9 @@
     "map": "Karte",
     "menu": "Speisekarte",
     "gameLang": "Spielsprache: ",
-    "plotMap": "Grundstückskarte: ",
+    "plotMap": "Kartenplot: ",
+    "shown": "angezeigt",
+    "hidden": "versteckt",
     "lang": "Deutsch",
     "reset": "Spielfortschritt zurücksetzen (einschließlich gefundener Dinge)",
     "contact": "Kontakt",

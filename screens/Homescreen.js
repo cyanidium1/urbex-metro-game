@@ -1,42 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, Text, SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import { TouchableOpacity } from "react-native";
-import { useDispatch, useSelector } from "react-redux";
-import ploten from "../src/plot/plot.json";
-import plotru from "../src/plot/plotru.json";
-
-// import plotua from "../src/plot/plotua.json";
-// import plotde from "../src/plot/plotde.json";
-// import plotfr from "../src/plot/plotfr.json";
-// import plotes from "../src/plot/plotes.json";
+import { useSelector } from "react-redux";
 
 function Homescreen() {
   const history = useSelector((state) => state.game.history);
   const navigation = useNavigation();
-  const dispatch = useDispatch();
-  const lang = useSelector((state) => state.game.lang);
   // lang settings
+  const lang = useSelector((state) => state.game.lang);
   let plot;
   switch (lang) {
     case "ru":
-      plot = plotru;
+      plot = require("../src/plot/plotru.json");
       break;
-    // case "es":
-    //   plot = plotes;
-    //   break;
-    // case "de":
-    //   plot = plotde;
-    //   break;
-    // case "fr":
-    //   plot = plotfr;
-    //   break;
-    // case "ua":
-    //   plot = plotua;
-    //   break;
+    case "es":
+      plot = require("../src/plot/plotes.json");
+      break;
+    case "de":
+      plot = require("../src/plot/plotde.json");
+      break;
+    case "fr":
+      plot = require("../src/plot/plotfr.json");
+      break;
+    case "ua":
+      plot = require("../src/plot/plotua.json");
+      break;
     default:
-      plot = ploten;
+      plot = require("../src/plot/plot.json");
       break;
   }
   const { play, about, settings, items } = plot.buttons;

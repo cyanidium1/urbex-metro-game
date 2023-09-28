@@ -1,7 +1,7 @@
 {
   "buttons": {
     "play": "Play",
-    "about": "About",
+    "about": "About / FAQ",
     "aboutabout": "About",
     "settings": "Settings",
     "items": "Items",
@@ -11,6 +11,8 @@
     "menu": "Menu",
     "gameLang": "Game language: ",
     "plotMap": "Plot map: ",
+    "shown": "shown",
+    "hidden": "hidden",
     "lang": "English",
     "reset": "Reset game progress (including found things)",
     "contact": "Contact",

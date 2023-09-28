@@ -33,22 +33,22 @@ const Settings = () => {
   let plot;
   switch (lang) {
     case "ru":
-      plot = plotru;
+      plot = require("../src/plot/plotru.json");
       break;
-    // case "es":
-    //   plot = plotes;
-    //   break;
-    // case "de":
-    //   plot = plotde;
-    //   break;
-    // case "fr":
-    //   plot = plotfr;
-    //   break;
-    // case "ua":
-    //   plot = plotua;
-    //   break;
+    case "es":
+      plot = require("../src/plot/plotes.json");
+      break;
+    case "de":
+      plot = require("../src/plot/plotde.json");
+      break;
+    case "fr":
+      plot = require("../src/plot/plotfr.json");
+      break;
+    case "ua":
+      plot = require("../src/plot/plotua.json");
+      break;
     default:
-      plot = ploten;
+      plot = require("../src/plot/plot.json");
       break;
   }
 
@@ -65,7 +65,7 @@ const Settings = () => {
         className="flex-1 flex-col justify-center"
         source={require("../src/images/settings.jpg")}
       >
-        <MenuButton />
+        <MenuButton text={plot.buttons.menu} />
 
         <TouchableOpacity
           className="bg-[#21252980] p-2 my-1 rounded items-center justify-center"
@@ -74,7 +74,8 @@ const Settings = () => {
           }}
         >
           <Text className="text-[#fcf6bd] text-xl font-bold">
-            {lang === "en" ? "Game language: English" : "Язык игры: русский"}
+            {plot.buttons.gameLang}
+            {plot.buttons.lang}
           </Text>
         </TouchableOpacity>
 
@@ -84,7 +85,7 @@ const Settings = () => {
         >
           <View className="bg-[#21252980] p-2 my-1 rounded items-center justify-center">
             <Text className="text-[#ff6a49] text-xl font-bold">
-              Other languages will be added soon...
+              Translations were made by ChatGPT and Google translate...
             </Text>
           </View>
           <View className="flex flex-row space-x-2 justify-center items-center">
@@ -109,11 +110,11 @@ const Settings = () => {
             <TouchableOpacity
               className="bg-[#21252980] p-2 my-1 rounded items-center justify-center"
               onPress={() => {
-                // dispatch(chLang("ua"));
+                dispatch(chLang("ua"));
                 setModalVisible(false);
               }}
             >
-              <Text className="text-[#747474] text-xl font-bold">
+              <Text className="text-[#fcf6bd] text-xl font-bold">
                 Українська
               </Text>
             </TouchableOpacity>
@@ -121,31 +122,31 @@ const Settings = () => {
             <TouchableOpacity
               className="bg-[#21252980] p-2 my-1 rounded items-center justify-center"
               onPress={() => {
-                // dispatch(chLang("es"));
+                dispatch(chLang("es"));
                 setModalVisible(false);
               }}
             >
-              <Text className="text-[#747474] text-xl font-bold">Español</Text>
+              <Text className="text-[#fcf6bd] text-xl font-bold">Español</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               className="bg-[#21252980] p-2 my-1 rounded items-center justify-center"
               onPress={() => {
-                // dispatch(chLang("de"));
+                dispatch(chLang("de"));
                 setModalVisible(false);
               }}
             >
-              <Text className="text-[#747474] text-xl font-bold">Deutsch</Text>
+              <Text className="text-[#fcf6bd] text-xl font-bold">Deutsch</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               className="bg-[#21252980] p-2 my-1 rounded items-center justify-center"
               onPress={() => {
-                // dispatch(chLang("fr"));
+                dispatch(chLang("fr"));
                 setModalVisible(false);
               }}
             >
-              <Text className="text-[#747474] text-xl font-bold">Français</Text>
+              <Text className="text-[#fcf6bd] text-xl font-bold">Français</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -157,13 +158,17 @@ const Settings = () => {
           }}
         >
           <Text className="text-[#fcf6bd] text-xl font-bold">
-            {showMap
+            {`${plot.buttons.plotMap}${
+              showMap ? plot.buttons.shown : plot.buttons.hidden
+            }`}
+
+            {/* {showMap
               ? lang === "en"
                 ? "Plot map:  shown"
                 : "Карта сюжета: показана"
               : lang === "en"
               ? "Plot map:  hidden"
-              : "Карта сюжета: спрятана"}
+              : "Карта сюжета: спрятана"} */}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -176,9 +181,7 @@ const Settings = () => {
           }}
         >
           <Text className="text-[#fcf6bd] text-xl font-bold">
-            {lang === "en"
-              ? "Reset game progress (including found things)"
-              : "Сбросить прогресс игры (включая предметы)"}
+            {plot.buttons.reset}
           </Text>
         </TouchableOpacity>
       </ImageBackground>

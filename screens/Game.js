@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  ImageBackground,
-  TouchableOpacity,
-  SafeAreaView,
-  Image,
-} from "react-native";
-import ploten from "../src/plot/plot.json";
-import plotru from "../src/plot/plotru.json";
+import { View, ImageBackground, SafeAreaView } from "react-native";
 import * as Animatable from "react-native-animatable";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -66,11 +57,22 @@ const Game = () => {
   let plot;
   switch (lang) {
     case "ru":
-      plot = plotru;
+      plot = require("../src/plot/plotru.json");
       break;
-
+    case "es":
+      plot = require("../src/plot/plotes.json");
+      break;
+    case "de":
+      plot = require("../src/plot/plotde.json");
+      break;
+    case "fr":
+      plot = require("../src/plot/plotfr.json");
+      break;
+    case "ua":
+      plot = require("../src/plot/plotua.json");
+      break;
     default:
-      plot = ploten;
+      plot = require("../src/plot/plot.json");
       break;
   }
   // story telling
@@ -172,9 +174,15 @@ const Game = () => {
             <CheatMap cheats={cheats} images={images} showCheats={showCheats} />
             <View className="flex-1">
               {/* top buttons */}
-              <MenuButton />
-              {showMap && <CheatBtn cheats={cheats} showCheats={showCheats} />}
-              <UndoBtn ctrlZ={ctrlZ} />
+              <MenuButton text={plot.buttons.menu} />
+              {showMap && (
+                <CheatBtn
+                  cheats={cheats}
+                  text={plot.buttons.map}
+                  showCheats={showCheats}
+                />
+              )}
+              <UndoBtn ctrlZ={ctrlZ} text={plot.buttons.undo} />
               <HiddenBtns scene={scene} onButtonClick={onButtonClick} />
               {/* bottom text and btns */}
               <View className="absolute bottom-0 w-full p-2 py-1 bg-[#333333a3] rounded-t-2xl">

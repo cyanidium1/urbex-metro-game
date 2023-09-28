@@ -18,11 +18,22 @@ const Intro = () => {
   let plot;
   switch (lang) {
     case "ru":
-      plot = plotru;
+      plot = require("../src/plot/plotru.json");
       break;
-
+    case "es":
+      plot = require("../src/plot/plotes.json");
+      break;
+    case "de":
+      plot = require("../src/plot/plotde.json");
+      break;
+    case "fr":
+      plot = require("../src/plot/plotfr.json");
+      break;
+    case "ua":
+      plot = require("../src/plot/plotua.json");
+      break;
     default:
-      plot = ploten;
+      plot = require("../src/plot/plot.json");
       break;
   }
   const [displayText, setDisplayText] = useState("");
@@ -56,7 +67,7 @@ const Intro = () => {
             {displayText}
           </Text>
         </View>
-        <MenuButton />
+        <MenuButton text={plot.buttons.menu} />
         <View className="absolute bottom-0 right-4">
           <TouchableOpacity
             className="bg-[#2d2d2d80] p-1 my-1 rounded items-center justify-center"

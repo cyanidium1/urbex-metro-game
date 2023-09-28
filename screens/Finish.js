@@ -12,8 +12,6 @@ import { useDispatch, useSelector } from "react-redux";
 import images from "../src/images";
 import { setFrame, updateHistory } from "../redux/gameSlice";
 import { useNavigation } from "@react-navigation/native";
-import ploten from "../src/plot/plot.json";
-import plotru from "../src/plot/plotru.json";
 
 const Finish = ({ route }) => {
   const navigation = useNavigation();
@@ -30,11 +28,22 @@ const Finish = ({ route }) => {
   let plot;
   switch (lang) {
     case "ru":
-      plot = plotru;
+      plot = require("../src/plot/plotru.json");
       break;
-
+    case "es":
+      plot = require("../src/plot/plotes.json");
+      break;
+    case "de":
+      plot = require("../src/plot/plotde.json");
+      break;
+    case "fr":
+      plot = require("../src/plot/plotfr.json");
+      break;
+    case "ua":
+      plot = require("../src/plot/plotua.json");
+      break;
     default:
-      plot = ploten;
+      plot = require("../src/plot/plot.json");
       break;
   }
   return (
@@ -43,7 +52,7 @@ const Finish = ({ route }) => {
         className="flex-1"
         source={require("../src/images/777.jpg")}
       >
-        <MenuButton />
+        <MenuButton text={plot.buttons.menu} />
         {finished && (
           <View className="flex items-center">
             <Text className="text-[#ffffff] text-2xl font-bold bg-[#2a2a2a80] p-1 mt-2 rounded">

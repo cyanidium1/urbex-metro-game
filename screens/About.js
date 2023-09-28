@@ -4,8 +4,6 @@ import { View } from "react-native-animatable";
 import MenuButton from "./Components/MenuButton";
 import bg from "../src/images/11132.jpg";
 import { ImageBackground } from "react-native";
-import ploten from "../src/plot/plot.json";
-import plotru from "../src/plot/plotru.json";
 import { useSelector } from "react-redux";
 import { Linking } from "react-native";
 
@@ -24,11 +22,22 @@ const About = () => {
   let plot;
   switch (lang) {
     case "ru":
-      plot = plotru;
+      plot = require("../src/plot/plotru.json");
       break;
-
+    case "es":
+      plot = require("../src/plot/plotes.json");
+      break;
+    case "de":
+      plot = require("../src/plot/plotde.json");
+      break;
+    case "fr":
+      plot = require("../src/plot/plotfr.json");
+      break;
+    case "ua":
+      plot = require("../src/plot/plotua.json");
+      break;
     default:
-      plot = ploten;
+      plot = require("../src/plot/plot.json");
       break;
   }
 
@@ -36,7 +45,7 @@ const About = () => {
     <SafeAreaView className="flex-1">
       <ImageBackground source={bg} className="flex-1">
         <View className="z-10">
-          <MenuButton />
+          <MenuButton text={plot.buttons.menu} />
         </View>
         <View className="flex-1 flex flex-row justify-between items-center m-1">
           <View className="space-y-4">

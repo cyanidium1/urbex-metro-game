@@ -29,7 +29,7 @@ const images = {
   p2: require("./images/2.jpg"),
   p21: require("./images/21.jpg"),
   p215: require("./images/215.jpg"),
-  p211: require("./images/211.jpg"),
+  p211: require("../src/videos/trainPassing.gif"),
   p121123: require("./images/121123.jpg"),
   p1211231: require("./images/1211231.jpg"),
   p12112311: require("./images/12112311.jpg"),

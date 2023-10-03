@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, ImageBackground, SafeAreaView } from "react-native";
+import { View, ImageBackground, SafeAreaView, Text } from "react-native";
 import * as Animatable from "react-native-animatable";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -19,6 +19,9 @@ import CheatBtn from "./Components/CheatBtn";
 import FindTheThing from "./Components/FindTheThing";
 import Toast from "react-native-toast-message";
 import { useNavigation } from "@react-navigation/native";
+import playMusicAsync from "../src/assets/soundPlayer";
+import playSfxAsync from "../src/assets/soundEffect";
+import functional from "../src/plot/functional.json";
 
 // for ads
 // import { BannerAd, BannerAdSize } from "react-native-google-mobile-ads";
@@ -43,6 +46,19 @@ const Game = () => {
       text2: text2,
     });
   };
+  // soundtrack
+  useEffect(() => {
+    if (frame.includes("p111321331") || frame.includes("pb1")) {
+      playMusicAsync("bunker");
+    } else {
+      if (frame.includes("p1211")) {
+        //   playMusicAsync("silence");
+        // } else
+        playMusicAsync("metro");
+      }
+    }
+  }, []);
+
   // animation
   const [imageVisible, setImageVisible] = useState(false);
   useEffect(() => {
@@ -79,9 +95,23 @@ const Game = () => {
   const scene = plot[frame];
   // controls
   function onButtonClick(click, buttonIndex) {
+    // soundtrack
     // console.log("inv:", inv);
-    // console.log("click:", click);
-    // console.log("buttonIndex:", buttonIndex);
+    console.log("click:", click);
+    if (click === "p111321331") {
+      playMusicAsync("bunker");
+    }
+    if (click === "p1211") {
+      playMusicAsync("metro");
+    }
+    if (click === "p121111" || click === "p1211") {
+      playMusicAsync("silence");
+    }
+    if (functional[click]) {
+      playSfxAsync(functional[click]);
+      // console.log(functional[]);
+    }
+
     const thing = scene[`b${buttonIndex}if`];
     if (thing) {
       if (!inv.includes(thing)) {
@@ -102,7 +132,6 @@ const Game = () => {
     if (click === "p777") {
       const percentage = (history.length / 45) * 100;
       const prog = percentage > 100 ? "100%" : Math.floor(percentage) + "%";
-      console.log(prog);
       dispatch(setProg(prog));
       navigation.navigate("Finish", {
         finished: true,
@@ -147,8 +176,6 @@ const Game = () => {
     showToast(msg, "success");
   }
 
-  console.log(inv);
-
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground source={images[frame]} className="cover flex-1">
@@ -167,9 +194,9 @@ const Game = () => {
             duration={1500}
           >
             {/*show frame for debug */}
-            {/* <Text className="absolute text-2xl text-white bg-black">
+            <Text className="absolute text-2xl text-white bg-black">
               FR: {frame + " "}
-            </Text> */}
+            </Text>
             {/* cheat map */}
             <CheatMap cheats={cheats} images={images} showCheats={showCheats} />
             <View className="flex-1">

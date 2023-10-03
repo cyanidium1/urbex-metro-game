@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { useSelector } from "react-redux";
+import playMusicAsync from "../src/assets/soundPlayer";
 
 function Homescreen() {
+  // audios
+  useEffect(() => {
+    playMusicAsync("main");
+  }, []);
+  //
+
   const history = useSelector((state) => state.game.history);
   const navigation = useNavigation();
   // lang settings
@@ -37,7 +44,7 @@ function Homescreen() {
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground
         className="bg-cover h-full w-full"
-        source={require("../src/images/main-1.jpg")}
+        source={require("../src/videos/main-1.gif")}
       >
         <View className="flex items-center mt-8">
           <TouchableOpacity

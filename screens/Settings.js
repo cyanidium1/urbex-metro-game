@@ -10,7 +10,9 @@ import MenuButton from "./Components/MenuButton";
 import { useDispatch, useSelector } from "react-redux";
 import {
   chLang,
+  setFinish,
   setFrame,
+  setLife,
   toggleShowMap,
   updateHistory,
   updateInv,
@@ -29,6 +31,7 @@ const Settings = () => {
   const dispatch = useDispatch();
   const showMap = useSelector((state) => state.game.showMap);
   const lang = useSelector((state) => state.game.lang);
+  const finished = useSelector((state) => state.game.finished);
 
   let plot;
   switch (lang) {
@@ -55,7 +58,7 @@ const Settings = () => {
   const showToast = () => {
     Toast.show({
       type: "error",
-      text1: lang === "en" ? "Progress deleted" : "Прогресс обнулен",
+      text1: plot.other.progressNull,
     });
   };
 
@@ -85,7 +88,8 @@ const Settings = () => {
         >
           <View className="bg-[#21252980] p-2 my-1 rounded items-center justify-center">
             <Text className="text-[#ff6a49] text-xl font-bold">
-              Translations were made by ChatGPT and Google translate...
+              Translations were made by ChatGPT and Google translate from
+              English...
             </Text>
           </View>
           <View className="flex flex-row space-x-2 justify-center items-center">
@@ -154,21 +158,22 @@ const Settings = () => {
         <TouchableOpacity
           className="bg-[#21252980] p-2 my-1 rounded items-center justify-center"
           onPress={() => {
-            dispatch(toggleShowMap(!showMap));
+            if (finished) {
+              return dispatch(toggleShowMap(!showMap));
+            }
+            alert(plot.other.map);
           }}
         >
-          <Text className="text-[#fcf6bd] text-xl font-bold">
+          <Text
+            className={
+              finished
+                ? "text-[#fcf6bd] text-xl font-bold"
+                : "text-[#7d7d7d] text-xl font-bold"
+            }
+          >
             {`${plot.buttons.plotMap}${
               showMap ? plot.buttons.shown : plot.buttons.hidden
             }`}
-
-            {/* {showMap
-              ? lang === "en"
-                ? "Plot map:  shown"
-                : "Карта сюжета: показана"
-              : lang === "en"
-              ? "Plot map:  hidden"
-              : "Карта сюжета: спрятана"} */}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -177,6 +182,8 @@ const Settings = () => {
             dispatch(updateInv([]));
             dispatch(updateHistory(["p0"]));
             dispatch(setFrame("p0"));
+            dispatch(setLife(2));
+            dispatch(setFinish(false));
             showToast();
           }}
         >

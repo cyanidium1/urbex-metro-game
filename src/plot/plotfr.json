@@ -21,6 +21,9 @@
     "tryAgain": "Essayer à nouveau"
   },
   "other": {
+    "noLife": "Vous êtes à court de vies.",
+    "map": "Terminez l'intrigue jusqu'à une fin positive pour débloquer la carte !",
+    "progressNull": "Réinitialisation de la progression",
     "visited": "Tu as visité",
     "visited2": "de tous les endroits !",
     "items": "objets secrets de",

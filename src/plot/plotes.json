@@ -21,6 +21,9 @@
     "tryAgain": "Intentar de nuevo"
   },
   "other": {
+    "noLife": "Te has quedado sin vidas.",
+    "map": "¡Completa la historia hasta un final positivo para desbloquear el mapa!",
+    "progressNull": "Progreso reiniciado",
     "visited": "Tu visitaste",
     "visited2": "de todos los lugares!",
     "items": "artículos secretos de",

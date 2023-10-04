@@ -16,6 +16,7 @@ import Settings from "./screens/Settings";
 import Toast from "react-native-toast-message";
 import { PersistGate } from "redux-persist/integration/react";
 import About from "./screens/About";
+import Logo from "./screens/Logo";
 
 const Stack = createStackNavigator();
 
@@ -25,7 +26,7 @@ export default function App() {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="Home">
+          <Stack.Navigator initialRouteName="Logo">
             <Stack.Screen
               name="Home"
               component={Homescreen}
@@ -54,6 +55,11 @@ export default function App() {
             <Stack.Screen
               name="About"
               component={About}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Logo"
+              component={Logo}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

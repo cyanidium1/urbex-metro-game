@@ -7,6 +7,7 @@ import {
   setFrame,
   updateHistory,
   setProg,
+  setLife,
 } from "../redux/gameSlice";
 import images from "../src/images";
 import MenuButton from "./Components/MenuButton";
@@ -36,6 +37,7 @@ const Game = () => {
   const showMap = useSelector((state) => state.game.showMap);
   const frame = useSelector((state) => state.game.frame);
   const history = useSelector((state) => state.game.history);
+
   // local state
   const [cheats, showCheats] = useState(false);
   // notifs
@@ -48,12 +50,13 @@ const Game = () => {
   };
   // soundtrack
   useEffect(() => {
+    console.log("kek");
     if (frame.includes("p111321331") || frame.includes("pb1")) {
       playMusicAsync("bunker");
     } else {
       if (frame.includes("p1211")) {
-        //   playMusicAsync("silence");
-        // } else
+        playMusicAsync("silence");
+      } else {
         playMusicAsync("metro");
       }
     }
@@ -95,21 +98,15 @@ const Game = () => {
   const scene = plot[frame];
   // controls
   function onButtonClick(click, buttonIndex) {
-    // soundtrack
-    // console.log("inv:", inv);
     console.log("click:", click);
     if (click === "p111321331") {
       playMusicAsync("bunker");
-    }
-    if (click === "p1211") {
-      playMusicAsync("metro");
     }
     if (click === "p121111" || click === "p1211") {
       playMusicAsync("silence");
     }
     if (functional[click]) {
       playSfxAsync(functional[click]);
-      // console.log(functional[]);
     }
 
     const thing = scene[`b${buttonIndex}if`];
@@ -144,6 +141,7 @@ const Game = () => {
     if (click === "ptryAgain") {
       dispatch(setFrame("p0"));
       dispatch(updateHistory(["p0"]));
+      dispatch(setLife(2));
       return;
     }
 
@@ -194,9 +192,9 @@ const Game = () => {
             duration={1500}
           >
             {/*show frame for debug */}
-            <Text className="absolute text-2xl text-white bg-black">
+            {/* <Text className="absolute text-2xl text-white bg-black">
               FR: {frame + " "}
-            </Text>
+            </Text> */}
             {/* cheat map */}
             <CheatMap cheats={cheats} images={images} showCheats={showCheats} />
             <View className="flex-1">

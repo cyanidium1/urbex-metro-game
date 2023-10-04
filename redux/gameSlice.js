@@ -11,6 +11,8 @@ const gameSlice = createSlice({
     history: ["p0"],
     lang: "en",
     progress: "",
+    finished: false,
+    life: 3,
   },
   reducers: {
     updateInv: (state, action) => {
@@ -31,6 +33,12 @@ const gameSlice = createSlice({
     setProg: (state, action) => {
       state.progress = action.payload;
     },
+    setFinish: (state, action) => {
+      state.finished = action.payload;
+    },
+    setLife: (state, action) => {
+      state.life = action.payload;
+    },
   },
 });
 
@@ -41,6 +49,8 @@ export const {
   updateHistory,
   chLang,
   setProg,
+  setLife,
+  setFinish,
 } = gameSlice.actions;
 
 export default gameSlice.reducer;

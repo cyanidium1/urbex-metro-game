@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Image,
   ImageBackground,
@@ -10,7 +10,12 @@ import {
 import MenuButton from "./Components/MenuButton";
 import { useDispatch, useSelector } from "react-redux";
 import images from "../src/images";
-import { setFrame, updateHistory } from "../redux/gameSlice";
+import {
+  setFinish,
+  setFrame,
+  setLife,
+  updateHistory,
+} from "../redux/gameSlice";
 import { useNavigation } from "@react-navigation/native";
 
 const Finish = ({ route }) => {
@@ -26,6 +31,13 @@ const Finish = ({ route }) => {
   // good stat ["p0", "p1", "p11", "p111", "p1112", "p1113", "p11131", "p11132", "p111321", "p1113213", "p11132133", "p111321331", "pb1", "pb11", "pb114", "pb1143", "pb1131", "pb11311", "pb113111", "pb1131113", "pb11311131", "pb113111", "pb1131111", "pb11311111", "pb113111111", "pb11311111",
   // "pb113111112", "pb1131111121", "pb11311111211", "pb113111", "pb1131112", "pb11311121", "pb113111212", "pb113111211", "pb1131112111", "pb113111211", "pb1131112112", "pb11311121", "p121111", "p1211111", "p1211231", "p12112311", "p121123111", "p1211231112", "p12112311121"]
   let plot;
+  useEffect(() => {
+    if (finished) {
+      dispatch(setFinish(true));
+      dispatch(setLife(2));
+    }
+  }, []);
+
   switch (lang) {
     case "ru":
       plot = require("../src/plot/plotru.json");

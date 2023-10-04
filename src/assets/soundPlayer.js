@@ -41,7 +41,6 @@ async function playMusicAsync(title) {
     return sound;
   } catch (error) {
     console.error("Error playing music:", error);
-    // Handle the error as needed.
     throw error;
   }
 }

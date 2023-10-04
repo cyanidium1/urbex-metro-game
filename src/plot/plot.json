@@ -21,6 +21,9 @@
     "tryAgain": "Try again!"
   },
   "other": {
+    "noLife": "You have run out of lives.",
+    "map": "Complete the storyline to any positive ending to unlock the map!",
+    "progressNull": "Progress reset",
     "visited": "You visited",
     "visited2": "of all locations!",
     "items": "secret items of",

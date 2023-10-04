@@ -21,6 +21,9 @@
     "tryAgain": "Versuchen Sie es erneut!"
   },
   "other": {
+    "noLife": "Ihnen sind die Leben ausgegangen.",
+    "map": "Schließen Sie die Handlung bis zu einem positiven Ende ab, um die Karte freizuschalten!",
+    "progressNull": "Fortschritt zurückgesetzt",
     "visited": "Du besuchtest",
     "visited2": "aller Standorte!",
     "items": "geheime Gegenstände von",

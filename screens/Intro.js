@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, ImageBackground, SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/core";
 import { TouchableOpacity } from "react-native";
-import { useSelector } from "react-redux";
+import { useSelector, useStore } from "react-redux";
 import MenuButton from "./Components/MenuButton";
 
 const Intro = () => {
@@ -30,6 +30,10 @@ const Intro = () => {
   }
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
+  // const [zoom, updZoom] = useState(1);
+  // setInterval(() => {
+  //   updZoom(zoom + 0.1);
+  // }, 200);
 
   const navigation = useNavigation();
 
@@ -53,7 +57,11 @@ const Intro = () => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <ImageBackground className="flex-1 cover" source={backgroundImage}>
+      <ImageBackground
+        className="flex-1 cover"
+        source={backgroundImage}
+        // style={{ transform: [{ scale: zoom }] }}
+      >
         <View className="absolute bottom-10 p-1 w-full">
           <Text className="text-white font-bold text-xl bg-[#30303080]">
             {displayText}

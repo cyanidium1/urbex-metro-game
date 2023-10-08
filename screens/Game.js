@@ -26,7 +26,6 @@ import functional from "../src/plot/functional.json";
 
 // for ads
 // import { BannerAd, BannerAdSize } from "react-native-google-mobile-ads";
-
 // const adUnitId = "ca-app-pub-7466278964548443~1477731689";
 
 const Game = () => {
@@ -177,6 +176,14 @@ const Game = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground source={images[frame]} className="cover flex-1">
+        {/* ads */}
+        {/* <BannerAd
+          unitId={adUnitId}
+          size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+          requestOptions={{
+            requestNonPersonalizedAdsOnly: true,
+          }}
+        /> */}
         {/* find the thing */}
         {scene.get && !inv.includes(scene.get.bg) && (
           <FindTheThing

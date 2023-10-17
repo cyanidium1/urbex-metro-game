@@ -1,4 +1,13 @@
 {
+  "guide": {
+    "text": "Este juego es una historia interactiva: el desarrollo de la trama, el final y el tiempo de juego dependen de las acciones del jugador. Actualmente, hay 2 niveles: túneles de metro y un refugio (que también debes encontrar). Después de completarlos, aparecerá la opción en la configuración para mostrar el mapa de la historia y visitar todas las ubicaciones. El juego tiene dos misiones secundarias: encontrar 3 huevos de Pascua ocultos y 15 pokémon. Para elegir una opción, a veces es necesario no solo hacer clic en el botón, sino también hacer clic en el área a la que deseas ir (hay áreas secretas en el juego que no se mencionan en la descripción de la escena) o en el objeto que deseas recoger. Intenta encontrar una linterna aquí y luego haz clic en el pasaje de la izquierda para finalizar la guía.",
+    "button": "Comenzar",
+    "skip": "Omitir",
+    "found": "🔦 ¡Has encontrado una linterna!",
+    "denied": "No vale la pena ir allí sin luz...",
+    "next": "¿Qué sigue?",
+    "whatNext": "El mapa está desbloqueado ahora (ver en la configuración). Puedes intentar explorar nuevas ubicaciones. No olvides dejar una reseña en Play Store; si el juego recibe una buena respuesta, crearé un proyecto mucho más grande con gráficos en 3D, panorámicas de 360 grados, personajes, diálogos y una trama mucho más extensa."
+  },
   "buttons": {
     "play": "Jugar",
     "about": "Acerca de / FAQ",

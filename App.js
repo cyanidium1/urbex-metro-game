@@ -17,6 +17,7 @@ import Toast from "react-native-toast-message";
 import { PersistGate } from "redux-persist/integration/react";
 import About from "./screens/About";
 import Logo from "./screens/Logo";
+import Guide from "./screens/Guide";
 
 const Stack = createStackNavigator();
 
@@ -60,6 +61,11 @@ export default function App() {
             <Stack.Screen
               name="Logo"
               component={Logo}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Guide"
+              component={Guide}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

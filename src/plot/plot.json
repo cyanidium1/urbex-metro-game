@@ -1,4 +1,13 @@
 {
+  "guide": {
+    "text": "This game is an interactive story: the plot development, ending, and gameplay time depend on the player's actions. Currently, there are 2 levels - subway tunnels and a bunker (which you also need to find). After completing them, the option to show the story map will appear in the settings to visit all locations. The game has two side quests: finding 3 hidden easter eggs and 15 pokemons. To choose an option, sometimes you need not only to click the button but also to click on the area where you want to go (there are secret areas in the game that are not mentioned in the scene description!) or on the item you want to pick up. Try to find a flashlight here and then click the left passage to finish the guide.",
+    "button": "Start",
+    "skip": "Skip",
+    "found": "🔦 You have found a flashlight!",
+    "denied": "It's not worth going there without light...",
+    "next": "What's next?",
+    "whatNext": "The map is now unlocked (see in settings). You can try to explore new locations. Don't forget to leave a review on the Play Store; if the game receives a good response, I will create a much larger project with 3D graphics, 360-degree panoramas, characters, dialogues, and a much more extensive storyline."
+  },
   "buttons": {
     "play": "Play",
     "about": "About / FAQ",

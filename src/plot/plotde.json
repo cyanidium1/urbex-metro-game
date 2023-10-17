@@ -1,4 +1,13 @@
 {
+  "guide": {
+    "text": "Dieses Spiel ist eine interaktive Geschichte: die Handlungsentwicklung, das Ende und die Spielzeit hängen von den Aktionen des Spielers ab. Derzeit gibt es 2 Ebenen - U-Bahn-Tunnel und einen Bunker (den Sie ebenfalls finden müssen). Nach deren Abschluss wird in den Einstellungen die Option angezeigt, die Story-Karte anzuzeigen, um alle Orte zu besuchen. Das Spiel hat zwei Nebenquests - finden Sie 3 versteckte Ostereier und 15 Pokemons. Um eine Option auszuwählen, müssen Sie manchmal nicht nur auf die Schaltfläche klicken, sondern auch auf den Bereich klicken, in den Sie gehen möchten (es gibt im Spiel geheime Bereiche, die nicht in der Szenenbeschreibung erwähnt werden!) oder auf den Gegenstand, den Sie aufnehmen möchten. Versuchen Sie hier eine Taschenlampe zu finden und dann auf den linken Durchgang zu klicken, um den Guide abzuschließen.",
+    "button": "Starten",
+    "skip": "Überspringen",
+    "found": "🔦 Sie haben eine Taschenlampe gefunden!",
+    "denied": "Es lohnt sich nicht, dorthin ohne Licht zu gehen...",
+    "next": "Was als Nächstes?",
+    "whatNext": "Die Karte ist jetzt freigeschaltet (siehe Einstellungen). Sie können neue Orte erkunden. Vergessen Sie nicht, eine Bewertung im Play Store zu hinterlassen - wenn das Spiel gut ankommt, werde ich ein viel größeres Projekt mit 3D, 360-Grad-Panoramen, Charakteren, Dialogen und einer deutlich umfangreicheren Handlung erstellen!"
+  },
   "buttons": {
     "play": "Spielen",
     "about": "Über das Spiel/FAQ",

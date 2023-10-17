@@ -116,6 +116,16 @@ const Finish = ({ route }) => {
                 {`${plot.other.visited} ${progress} ${plot.other.visited2}`}
               </Text>
             )}
+            {finished && (
+              <TouchableOpacity
+                className=" px-4 py-2 bg-cyan-800 rounded-xl mt-2"
+                onPress={() => alert(plot.guide.whatNext)}
+              >
+                <Text className="text-[#fcf6bd] text-base font-bold">
+                  {plot.guide.next}
+                </Text>
+              </TouchableOpacity>
+            )}
           </View>
         </View>
         <TouchableOpacity

@@ -3,7 +3,6 @@ import { Audio } from "expo-av";
 let audio = null;
 
 async function playMusicAsync(title) {
-  console.log(title);
   let mp3;
 
   switch (title) {
@@ -26,7 +25,6 @@ async function playMusicAsync(title) {
 
   try {
     if (audio) {
-      // Stop and unload the previous audio
       await audio.stopAsync();
       await audio.unloadAsync();
     }
@@ -35,7 +33,6 @@ async function playMusicAsync(title) {
 
     audio = sound;
 
-    console.log("Playing Sound", title);
     await sound.playAsync();
 
     return sound;

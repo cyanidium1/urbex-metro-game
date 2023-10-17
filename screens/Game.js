@@ -25,8 +25,14 @@ import playSfxAsync from "../src/assets/soundEffect";
 import functional from "../src/plot/functional.json";
 
 // for ads
-// import { BannerAd, BannerAdSize } from "react-native-google-mobile-ads";
-// const adUnitId = "ca-app-pub-7466278964548443~1477731689";
+import {
+  BannerAd,
+  BannerAdSize,
+  TestIds,
+} from "react-native-google-mobile-ads";
+const adUnitId = __DEV__
+  ? TestIds.BANNER
+  : "ca-app-pub-7466278964548443/2595086829";
 
 const Game = () => {
   // state
@@ -36,6 +42,7 @@ const Game = () => {
   const showMap = useSelector((state) => state.game.showMap);
   const frame = useSelector((state) => state.game.frame);
   const history = useSelector((state) => state.game.history);
+  const ads = useSelector((state) => state.game.ads);
 
   // local state
   const [cheats, showCheats] = useState(false);
@@ -177,13 +184,15 @@ const Game = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground source={images[frame]} className="cover flex-1">
         {/* ads */}
-        {/* <BannerAd
-          unitId={adUnitId}
-          size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-          requestOptions={{
-            requestNonPersonalizedAdsOnly: true,
-          }}
-        /> */}
+        {ads && (
+          <BannerAd
+            unitId={adUnitId}
+            size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+            requestOptions={{
+              requestNonPersonalizedAdsOnly: true,
+            }}
+          />
+        )}
         {/* find the thing */}
         {scene.get && !inv.includes(scene.get.bg) && (
           <FindTheThing

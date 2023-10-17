@@ -1,4 +1,13 @@
 {
+  "guide": {
+    "text": "Ce jeu est une histoire interactive : le développement de l'intrigue, la fin et la durée du jeu dépendent des actions du joueur. Actuellement, il y a 2 niveaux - les tunnels du métro et un abri (que vous devez également trouver). Après les avoir terminés, l'option d'afficher la carte de l'histoire apparaîtra dans les paramètres pour visiter tous les endroits. Le jeu comporte deux quêtes secondaires : trouver 3 œufs de Pâques cachés et 15 pokémons. Pour choisir une option, il est parfois nécessaire non seulement de cliquer sur le bouton, mais aussi de cliquer sur la zone où vous souhaitez vous rendre (il existe des zones secrètes dans le jeu qui ne sont pas mentionnées dans la description de la scène !) ou sur l'objet que vous souhaitez ramasser. Essayez de trouver une lampe de poche ici, puis cliquez sur le passage à gauche pour terminer le guide.",
+    "button": "Démarrer",
+    "skip": "Passer",
+    "found": "🔦 Vous avez trouvé une lampe de poche !",
+    "denied": "Il n'est pas conseillé d'aller là-bas sans lumière...",
+    "next": "Et ensuite ?",
+    "whatNext": "La carte est maintenant déverrouillée (voir dans les paramètres). Vous pouvez essayer d'explorer de nouveaux emplacements. N'oubliez pas de laisser un commentaire sur le Play Store ; si le jeu reçoit de bonnes critiques, je créerai un projet beaucoup plus grand avec des graphismes en 3D, des panoramiques à 360 degrés, des personnages, des dialogues et une intrigue beaucoup plus étendue."
+  },
   "buttons": {
     "play": "Jouer",
     "about": "À propos / FAQ",

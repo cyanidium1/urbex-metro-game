@@ -12,7 +12,8 @@ const gameSlice = createSlice({
     lang: "en",
     progress: "",
     finished: false,
-    life: 3,
+    life: 2,
+    ads: true,
   },
   reducers: {
     updateInv: (state, action) => {
@@ -39,6 +40,9 @@ const gameSlice = createSlice({
     setLife: (state, action) => {
       state.life = action.payload;
     },
+    setAds: (state, action) => {
+      state.ads = action.payload;
+    },
   },
 });
 
@@ -51,6 +55,7 @@ export const {
   setProg,
   setLife,
   setFinish,
+  setAds,
 } = gameSlice.actions;
 
 export default gameSlice.reducer;

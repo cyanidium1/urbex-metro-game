@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, TouchableOpacity } from "react-native";
 
-const FindTheThing = ({ foundThing, image, scene }) => {
+const FindTheThing = ({ foundThing, image, scene, rotationDegrees = 0 }) => {
   return (
     <TouchableOpacity
       onPress={() => foundThing()}
@@ -11,6 +11,7 @@ const FindTheThing = ({ foundThing, image, scene }) => {
         height: scene.get.height,
         top: scene.get.top,
         left: scene.get.left,
+        transform: [{ rotate: `${rotationDegrees}deg` }],
       }}
     >
       <Image className="w-full h-full object-contain" source={image} />

@@ -3,7 +3,6 @@ import { Audio } from "expo-av";
 let audio = null;
 
 async function playSfxAsync(title) {
-  console.log(title);
   let mp3 = null;
 
   switch (title) {
@@ -33,7 +32,6 @@ async function playSfxAsync(title) {
       // mp3 = require("../sound/main.mp3");
       break;
   }
-  console.log("sound", mp3);
   try {
     if (audio) {
       // Stop and unload the previous audio
@@ -45,7 +43,6 @@ async function playSfxAsync(title) {
 
     audio = sound;
 
-    console.log("Playing Sound", title);
     await sound.playAsync();
 
     return sound;

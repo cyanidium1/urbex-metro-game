@@ -9,6 +9,9 @@
     "preview": {
       "distribution": "internal"
     },
+    "preview3": {
+      "developmentClient": true
+    },
     "production": {}
   },
   "submit": {

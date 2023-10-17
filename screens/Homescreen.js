@@ -3,8 +3,9 @@ import { View, Text, SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import { TouchableOpacity } from "react-native";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import playMusicAsync from "../src/assets/soundPlayer";
+import { setAds } from "../redux/gameSlice";
 
 function Homescreen() {
   // audios
@@ -14,6 +15,8 @@ function Homescreen() {
   //
 
   const history = useSelector((state) => state.game.history);
+  const ads = useSelector((state) => state.game.ads);
+  const dispatch = useDispatch();
   const navigation = useNavigation();
   // lang settings
   const lang = useSelector((state) => state.game.lang);
@@ -39,7 +42,14 @@ function Homescreen() {
       break;
   }
   const { play, about, settings, items } = plot.buttons;
-
+  const [clicks, setClicks] = useState(0);
+  const handleClick = () => {
+    setClicks(clicks + 1);
+    if (clicks > 8) {
+      alert("Ads disabled");
+      dispatch(setAds(false));
+    }
+  };
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground
@@ -52,7 +62,7 @@ function Homescreen() {
             onPress={() => {
               history.length > 1
                 ? navigation.navigate("Game")
-                : navigation.navigate("Intro");
+                : navigation.navigate("Guide");
             }}
           >
             <Text className="text-[#fcf6bd] text-xl font-bold">{play}</Text>
@@ -83,6 +93,24 @@ function Homescreen() {
           >
             <Text className="text-[#fcf6bd] text-xl font-bold">{items}</Text>
           </TouchableOpacity>
+          {ads && (
+            <TouchableOpacity
+              className="p-2 my-1 rounded items-center w-16 h-28"
+              onPress={handleClick}
+            ></TouchableOpacity>
+          )}
+          {!ads && (
+            <TouchableOpacity
+              className="bg-[#21252980] p-1 mt-28 rounded items-center w-36"
+              onPress={() => {
+                alert("Thanks for your support !");
+                dispatch(setAds(true));
+                setClicks(0);
+              }}
+            >
+              <Text className="text-[#ffffff] font-bold">Show ads</Text>
+            </TouchableOpacity>
+          )}
         </View>
       </ImageBackground>
     </SafeAreaView>
